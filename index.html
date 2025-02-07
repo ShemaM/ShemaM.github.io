@@ -35,9 +35,8 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand logo" href="index.html">
-                    <img src="images/IL03.jpg" alt="Logo" class="img-fluid">
-                    <span class="logo-text">Importance Leadership</span>
+                <a class="navbar-brand logo" href="index.html" aria-label="Home">
+                    <img src="https://static.wixstatic.com/media/f273bc_b3caf8fb807d4c8590d97d1e93321328~mv2.png/v1/fill/w_263,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IL02.png" alt="Logo" class="logo-image">
                 </a>
         
                 <!-- Hamburger Menu -->
@@ -55,7 +54,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Who We Are
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown">
                                 <li><a class="dropdown-item" href="#mission">Mission</a></li>
                                 <li><a class="dropdown-item" href="#vision">Vision</a></li>
                                 <li><a class="dropdown-item" href="#team">Team</a></li>
@@ -67,7 +66,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 What We Do
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown">
                                 <li><a class="dropdown-item" href="#services">Services</a></li>
                                 <li><a class="dropdown-item" href="#usa">USA</a></li>
                                 <li><a class="dropdown-item" href="#kenya">Kenya</a></li>
@@ -80,7 +79,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="impactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Impact
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="impactDropdown">
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="impactDropdown">
                                 <li><a class="dropdown-item" href="#facts">Facts & Figures</a></li>
                                 <li><a class="dropdown-item" href="#news">News</a></li>
                                 <li><a class="dropdown-item" href="#stories">Impact Stories</a></li>
@@ -92,7 +91,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Donate
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="donateDropdown">
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="donateDropdown">
                                 <li><a class="dropdown-item" href="#makeGift">Make a Gift</a></li>
                                 <li><a class="dropdown-item" href="#donors">Donors</a></li>
                             </ul>
@@ -103,18 +102,30 @@
                             <a class="nav-link dropdown-toggle" href="#" id="connectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Connect With Us
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="connectDropdown">
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="connectDropdown">
                                 <li><a class="dropdown-item" href="#facebook">Facebook</a></li>
                                 <li><a class="dropdown-item" href="#linkedin">LinkedIn</a></li>
                                 <li><a class="dropdown-item" href="#email">Email</a></li>
                                 <li><a class="dropdown-item" href="#youtube">YouTube</a></li>
                             </ul>
                         </li>
+        
+                        <!-- Search Bar -->
+                        <li class="nav-item ms-lg-3">
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit">Search</button>
+                            </form>
+                        </li>
+        
+                        <!-- Call-to-Action Button -->
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary" href="#donate" role="button">Donate Now</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
         
     </header>
 

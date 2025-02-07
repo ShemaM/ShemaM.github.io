@@ -19538,36 +19538,82 @@ br {
   background-color: rgba(0, 123, 255, 0.1);
   border-radius: 4px;
 }
-
+/* Dropdown Menu Enhancements */
 .dropdown-menu {
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown-item {
-  font-size: 15px;
-  padding: 10px 15px;
-  color: #555;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+/* Navbar Link Hover Effects */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #007bff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link:focus::after {
+  width: 100%;
+}
+
+/* Call-to-Action Button */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
-.dropdown-item:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-/*LOGO */
-.logo-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #007bff;
-  text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease;
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0056b3;
 }
 
-.logo-text:hover {
-  color: #0056b3;
-  transform: scale(1.1);
+
+.navbar-brand {
+  display: inline-block;
   text-decoration: none;
+  padding: 10px; /* Space around the logo */
 }
+
+.logo-image {
+  width: 100px; /* Adjust size */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  display: block; /* Ensures proper alignment */
+  margin: 0 auto; /* Centers the logo if needed */
+}
+
+.logo-image:hover {
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
 
