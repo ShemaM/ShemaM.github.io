@@ -2,13 +2,14 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title> IMPORTANCE LEADERSHIP</title>
+    <title> Importance Leadership</title>
+    <link rel="icon" type="png" href="images/IL03 (2).jpg">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="ThemeZaa">
+    <meta name="shema" content="Importance Leadership">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="description"
-        content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
+        content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
     <!-- favicon icon -->
     
     <!-- google fonts preconnect -->
@@ -17,19 +18,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- style sheets and font icons  -->
-    <link rel="stylesheet" href="css/vendors.min.css" />
     <link rel="stylesheet" href="css/icon.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     
 </head>
 
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b" class="custom-cursor">
-    <!-- start cursor -->
-    
-    <!-- end cursor -->
-    <!-- start header -->
-    
+    <!-- start page loader -->
+     <div id="preloader"></div>
+    <!-- end page loader -->
     <header>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
@@ -88,15 +92,15 @@
         
                         <!-- Donate Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button">
                                 Donate
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="donateDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="donateDropdown">
                                 <li><a class="dropdown-item" href="#makeGift">Make a Gift</a></li>
                                 <li><a class="dropdown-item" href="#donors">Donors</a></li>
                             </ul>
                         </li>
-        
+                        
                         <!-- Connect With Us Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="connectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -110,14 +114,14 @@
                             </ul>
                         </li>
         
-                        <!-- Search Bar -->
-                        <li class="nav-item ms-lg-3">
+                        <!-- Search Bar
+                        <li class="nav-item ms-lg-1">
                             <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-primary" type="submit">Search</button>
                             </form>
                         </li>
-        
+         -->
                         <!-- Call-to-Action Button -->
                         <li class="nav-item ms-lg-3">
                             <a class="btn btn-primary" href="#donate" role="button">Donate Now</a>
@@ -131,42 +135,41 @@
 
 
     <!-- start banner -->
+    <!-- start banner -->
     <section class="p-0 full-screen ipad-top-space-margin position-relative overflow-hidden sm-h-auto">
         <div class="container-fluid p-0 h-100 position-relative">
             <div class="row h-100 g-0">
                 <!-- Left Column -->
-                <div class="col-12 col-md-6 bg-base-color d-flex flex-column justify-content-center p-10 position-relative order-2 order-md-1 sm-px-30 sm-py-50">
+                <div
+                    class="col-12 col-md-6 bg-base-color bg-sliding-line d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px  sm-pt-50px sm-pb-50px order-2 order-md-1">
 
-                    <!-- Heading Section -->
-                    <div class="heading-container fs-40 sm-fs-60 lh-65 fw-bold text-dark-gray mb-50 sm-mb-30 alt-font ls-minus-1"
-                        >
-                        <div class="position-relative z-index-12 mb-20">
-                            <span class="highlight-separator mt-12">
-                               <h1 class="h1">EMPOWERING YOUNG PEOPLE<br>
+                    <div class="fs-40px sm-fs-60 lh-65 fw-600 text-dark-gray mb-50px sm-mb-30px alt-font ls-minus-1px sm-ls-minus-1px"
+                        data-anime='{ "el": "childs", "translateX": [80, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="position-relative z-index-9">
+                            <div class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="1000">
+                                EMPOWERING YOUNG PEOPLE
+                            </div>
+                            <div class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="2000">
                                 TO BECOME LEADERS
-                                </h1>
-                            </span>
+                            </div>
                         </div>
                     </div>
-                
-                    <!-- Subheading Section -->
-                    <div class="subheading-container fs-20 sm-fs-18 text-dark-gray mb-20 w-70 xxl-w-100 lg-w-100 sm-w-90">
-                        
-                            <p class="subtitle">We believe leadership is the key to inspiring action, driving change, and unlocking potential.</p>
-                        
+                    <div class="fs-20 sm-fs-18 text-dark-gray mb-20px w-70 xxl-w-100 lg-w-100 sm-w-90 d-block"
+                        data-anime='{ "el": "childs", "translateX": [110, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="d-inline-block opacity-8">
+                            Importance Leadership empowers diverse youth to become ethical, inclusive, and purpose-driven leaders who drive sustainable global change. Join us in shaping a just, equitable, and transformative future..</span>
                     </div>
-                
-                    <!-- CTA Button Section -->
-                    <div class="cta-container">
-                        <a href="index.html" target="_blank" class="text-decoration-none">
-                            <button class="learn-more">
+                    <div class="icon-with-text-style-08"
+                        data-anime='{ "el": "childs", "translateX": [140, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <a href="index.html" target="blank">
+                            <button class="learn-more fw-600 text-dark-gray bg-base-color-hover">
                                 Learn More
                             </button>
+                           
                         </a>
                     </div>
-                
                 </div>
-                
+    
                 <!-- Right Column -->
                 <div class="col-12 col-md-6 position-relative order-1 order-md-2">
                     <div class="swiper h-100 banner-slider sm-h-450px swiper-light-pagination"
@@ -174,18 +177,39 @@
                        
                         <div class="swiper-wrapper" style ="height:100hv; position: relative">
                             <!-- Slide 1 -->
-                            
+                            <div class="swiper-slide" aria-label="Slide 1: Description of the first image">
+                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
+                                     style="background-image:url('image/Lead.jpg');" loading="lazy"></div>
+                                <div class="position-absolute bottom-20px left-20px text-white">
+                                <p class="em"> <em>image 1</em></p>
                                     
                                 </div>
                             </div>
                         
                             <!-- Slide 2 -->
-                            
+                            <div class="swiper-slide" aria-label="Slide 2: Description of the second image">
+                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
+                                     style="background-image:url('image/pexels-liliana-drew-8498152.jpg');" loading="lazy"></div>
+                                <div class="position-absolute bottom-20px left-20px text-white">
+                                   <p class="em"><em>image 2</em></p>
+                                    
                                 </div>
                             </div>
-                        
-                            <!-- Slide 3 -->
-                            
+                        <!-- Slide 3 -->
+                            <div class="swiper-slide" aria-label="Slide 2: Description of the second image">
+                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
+                                     style="background-image:url('image/pexels-liliana-drew-8498152.jpg');" loading="lazy"></div>
+                                <div class="position-absolute bottom-20px left-20px text-white">
+                                   <p class="em"><em>image 3</em></p>
+                                    
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide" aria-label="Slide 3: Description of the third image">
+                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
+                                     style="background-image:url('image/pexels-seyhmuskino-30616609.jpg');" loading="lazy"></div>
+                                <div class="position-absolute bottom-20px left-20px text-white">
+                                   <p class="em"><em>image 4</em></p>
                                     
                                 </div>
                             </div>
@@ -195,681 +219,162 @@
             </div>
         </div>
     </section>
+    
     <!-- end banner -->
     <!-- start section -->
-    <section class="pb-0">
+    
+    <section class="pb-5">
         <div class="container">
             <!-- Section Header -->
-            <div class="col-xl-12 text-center mb-4">
+            <div class="col-xl-12 text-center mb-5">
                 <h3 class="alt-font text-black fw-bold ls-minus-3">IMPACT</h3>
+                <p class="fs-5 text-muted">Our journey of transforming communities and empowering youth leaders</p>
             </div>
-            <div class="row row-cols-1 row-cols-lg-5 row-cols-md-2 counter-style-04"
-                data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <!-- start counter item -->
-                <div class="col last-paragraph-no-margin md-mb-30px text-center text-md-start">
-                    <span class="alt-font fw-600 d-block mb-5px text-dark-gray fs-18">Partnerships with RLOs</span>
-                    <div class="separator-line-1px bg-extra-medium-gray w-90 mt-25px mb-25px sm-w-100"></div>
-                    <h4 class="vertical-counter d-inline-flex alt-font text-dark-gray fw-700 ls-minus-2px sm-ls-minus-1px sm-mb-0"
-                        style="color: #ff9343;" data-to="73"></h4>
-                </div>
-                <!-- end counter item -->
-                <!-- start counter item -->
-                <div class="col last-paragraph-no-margin md-mb-30px text-center text-md-start">
-                    <span class="alt-font fw-600 d-block mb-5px text-dark-gray fs-18">Funding                    </span>
-                    <div class="separator-line-1px bg-extra-medium-gray w-90 mt-25px mb-25px sm-w-100"></div>
-                    <h4 class="vertical-counter d-inline-flex alt-font text-dark-gray fw-700 ls-minus-2px sm-ls-minus-1px sm-mb-0"
-                        style="color: #ff9343;" data-prefix="£" data-to="4.5"></h4>
-                </div>
-                <!-- end counter item -->
-                <!-- start counter item -->
-                <div class="col last-paragraph-no-margin sm-mb-30px text-center text-md-start">
-                    <span class="alt-font fw-600 d-block mb-5px text-dark-gray fs-18">Countries</span>
-                    <div class="separator-line-1px bg-extra-medium-gray w-90 mt-25px mb-25px sm-w-100"></div>
-                    <h4 class="vertical-counter d-inline-flex alt-font text-dark-gray fw-700 ls-minus-2px sm-ls-minus-1px sm-mb-0"
-                        style="color: #ff9343;" data-to="7"></h4>
-                </div>
-                <!-- end counter item -->
-                <!-- start counter item -->
-                <div class="col last-paragraph-no-margin text-center text-md-start">
-                    <span class="alt-font fw-600 d-block mb-5px text-dark-gray fs-18">People reached </span>
-                    <div class="separator-line-1px bg-extra-medium-gray w-90 mt-25px mb-25px sm-w-100"></div>
-                    <h4 class="vertical-counter d-inline-flex alt-font text-dark-gray fw-700 ls-minus-2px sm-ls-minus-1px sm-mb-0"
-                        style="color: #ff9343;" data-to="74373"></h4>
-                </div>
-                <!-- end counter item -->
-                <!-- start new counter item -->
-                <div class="col last-paragraph-no-margin text-center text-md-start">
-                    <span class="alt-font fw-600 d-block mb-5px text-dark-gray fs-18">Institutional donors directly funding RLOs</span>
-                    <div class="separator-line-1px bg-extra-medium-gray w-90 mt-25px mb-25px sm-w-100"></div>
-                    <h4 class="vertical-counter d-inline-flex alt-font text-dark-gray fw-700 ls-minus-2px sm-ls-minus-1px sm-mb-0"
-                        style="color: #ff9343;" data-to="20"></h4>
-                </div>
-                <!-- end new counter item -->
-            </div>
-          
-        </div>
-    </section>
     
-    <!-- end section -->
-
- 
-
-    <!-- start section -->
-    <section class="bg-solitude-cohere-pink pt-30px pb-70px">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-xl-7 col-lg-9 col-md-10 text-center">
-                    <h3 class="alt-font text-dark-gray fw-600 ls-minus-1px"
-                        data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        WHAT WE DO</h3>
-                </div>
-            </div>
-            <div class="row align-items-center"
-                data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 150, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <div class="col-xl-3 col-lg-4 col-md-12 tab-style-05 md-mb-30px sm-mb-20px">
-                    <!-- start tab navigation -->
-                    <ul class="nav nav-tabs justify-content-center border-0 text-left fw-500 fs-18 alt-font">
-                        <li class="nav-item"><a data-bs-toggle="tab" href="#tab_four1"
-                                class="nav-link d-flex align-items-center active"><span
-                                    style="color: black !important;">FUNDING</span></a></li>
-                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab_four2"><span
-                                    style="color: black !important;">CAPACITY</span></a></li>
-                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab_four3"><span
-                                    style="color: black !important;">COORDINATION </span></a></li>
-                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab_four4"></i><span
-                                    style="color: black !important;">ADVOCACY </span></a></li>
-                    </ul>
-                    <!-- end tab navigation -->
-                </div>
-                <div class="col-xl-9 col-lg-8 col-md-12">
-                    <div class="tab-content">
-                        <!-- start tab content -->
-                        <div class="tab-pane fade in active show" id="tab_four1">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                    <img src="images-copy/wwd_funding.png" alt="" class="border-radius-6px w-100" />
-                                </div>
-                                <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                    <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                            class="fw-600">FUNDING</span> </h5>
-                                    <p style="color: black;">Create funding opportunities for RLOs and encourage donors
-                                        to fund directly</p>
-                                    <div class="icon-with-text-style-08"
-                                        data-anime='{ "el": "childs", "translateX": [140, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div
-                                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="index.html" target="blank"
-                                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Learn More </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Tabs Navigation -->
+            <ul class="nav nav-tabs justify-content-center mb-4" id="impactTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="facts-tab" data-bs-toggle="tab" data-bs-target="#facts" type="button" role="tab" aria-controls="facts" aria-selected="true">Facts & Figures</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="stories-tab" data-bs-toggle="tab" data-bs-target="#stories" type="button" role="tab" aria-controls="stories" aria-selected="false">Impact Stories</button>
+                </li>
+            </ul>
+    
+            <!-- Tabs Content -->
+            <div class="tab-content">
+                <!-- Facts & Figures -->
+                <div class="tab-pane fade show active" id="facts" role="tabpanel" aria-labelledby="facts-tab">
+                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+                        <!-- Start Counter Item -->
+                        <div class="col text-center">
+                            <img src="image/pexels-divinetechygirl-1181274.jpg" alt="Youth Empowered" class="rounded-circle mb-3">
+                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Youth Empowered</h4>
+                            <hr>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="2500">0</h2>
+                            <p class="text-muted mb-3">Creating opportunities for future leaders</p>
                         </div>
-                        <!-- end tab content -->
-                        <!-- start tab content -->
-                        <div class="tab-pane fade in" id="tab_four2">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                    <img src="images-copy/wwd_capacity.png" alt="" class="border-radius-6px w-100" />
-                                </div>
-                                <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                    <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                            class="fw-600">CAPACITY</span></h5>
-                                    <p style="color: black;">Trainings to ensure that RLOs can effectively respond to
-                                        the needs of their communities
+                        <!-- End Counter Item -->
+    
+                        <!-- Start Counter Item -->
+                        <div class="col text-center">
+                            <img src="image/pexels-renni-30516814.jpg" alt="Mentors" class="rounded-circle mb-3">
+                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Mentors</h4>
+                            <hr>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="20">0</h2>
+                            <p class="text-muted mb-3">Experienced leaders guiding the next generation</p>
+                        </div>
+                        <!-- End Counter Item -->
+    
+                        <!-- Start Counter Item -->
+                        <div class="col text-center">
+                            <img src="image/pexels-rdne-7414284.jpg" alt="Leadership Workshops" class="rounded-circle mb-3">
+                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Leadership Workshops</h4>
+                            <hr>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="13">0</h2>
+                            <p class="text-muted mb-3">Inspiring change through impactful training</p>
+                        </div>
+                        <!-- End Counter Item -->
+    
+                        <!-- Start Counter Item -->
+                        <div class="col text-center">
+                            <img src="image/pexels-anntarazevich-5598284.jpg" alt="Communities Impacted" class="rounded-circle mb-3">
+                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Communities Impacted</h4>
+                            <hr>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="14">0</h2>
+                            <p class="text-muted mb-3">Reaching and transforming lives worldwide</p>
+                        </div>
+                        <!-- End Counter Item -->
+                    </div>
+                </div>
+    
+                <!-- Impact Stories -->
+                <div class="tab-pane fade" id="stories" role="tabpanel" aria-labelledby="stories-tab">
+                    <div class="row g-4">
+                        <!-- Story Item 1: Back-to-School -->
+                        <div class="col-md-7">
+                            <div class="card shadow-lg">
+                                <img src="image/pexels-liliana-drew-8498152.jpg" class="card-img-top" alt="Back-to-School Event impacting 100 refugees" loading="lazy">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Back-to-School: Empowering Refugee Orphans</h5>
+                                    <p class="card-text text-muted">
+                                        This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential back-to-school equipment, including books, pens, pencils, and other supplies, ensuring they start the academic year on the right foot.
                                     </p>
-                                    <div class="icon-with-text-style-08">
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div
-                                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="index.html" target="blank"
-                                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Learn More </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a href="#" class="btn btn-outline-success btn-sm">Read Full Story</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- end tab content -->
-                        <!-- start tab content -->
-                        <div class="tab-pane fade in" id="tab_four3">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                    <img src="images-copy/wwd_coordination.png" alt=""
-                                        class="border-radius-6px w-100" />
-                                </div>
-                                <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                    <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                            class="fw-600">COORDINATION </span> </h5>
-                                    <p style="color: black;">Showcase the work of RLOs and connect them to other
-                                        organisations</p>
-                                    <div class="icon-with-text-style-08">
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div
-                                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="index.html" target="blank"
-                                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Learn More </a>
-                                            </div>
-                                        </div>
-                                    </div>
+    
+                        <!-- Story Item 2: Emotional Intelligence Webinar -->
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <img src="image/pexels-rdne-7414284.jpg" class="card-img-top" alt="Emotional Intelligence Webinar impacting 50 youths" loading="lazy">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Webinar: Emotional Intelligence</h5>
+                                    <p class="card-text text-muted">
+                                        We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. The session helped participants develop self-awareness, empathy, and relationship-building skills essential for personal and professional growth.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-success btn-sm">Read Full Story</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- end tab content -->
-                        <!-- start tab content -->
-                        <div class="tab-pane fade in" id="tab_four4">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 offset-xl-1 sm-mb-30px">
-                                    <img src="images-copy/wwd_advocacy.png" alt="" class="border-radius-6px w-100" />
-                                </div>
-                                <div class="col-xl-4 col-md-6 offset-xl-1 text-center text-md-start">
-                                    <h5 class="alt-font text-dark-gray mb-20px fw-500 ls-minus-1px"><span
-                                            class="fw-600">ADVOCACY </span></h5>
-                                    <p style="color: black;"> Influence sector practices and create opportunities to
-                                        shift power.</p>
-                                    <div class="icon-with-text-style-08">
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div
-                                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="index.html" target="blank"
-                                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Learn More </a>
-                                            </div>
-                                        </div>
-                                    </div>
+    
+                        <!-- Story Item 3: Leadership Workshop -->
+                        <div class="col-md-6">
+                            <div class="card shadow-sm">
+                                <img src="image/pexels-seyhmuskino-30616609.jpg" class="card-img-top" alt="Leadership Workshop with 60 participants" loading="lazy">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Leadership Workshop</h5>
+                                    <p class="card-text text-muted">
+                                        On 8th February 2025, we hosted a Leadership Workshop attended by 60 participants. The workshop was designed to nurture leadership skills, empower decision-making, and inspire change within communities.
+                                    </p>
+                                    <a href="#" class="btn btn-outline-success btn-sm">Read Full Story</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- end tab content -->
                     </div>
                 </div>
             </div>
         </div>
+    
+        <!-- Animation Script for Counters -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const counters = document.querySelectorAll('.vertical-counter');
+                counters.forEach(counter => {
+                    const countUp = new CountUp(counter, counter.getAttribute('data-to'));
+                    countUp.start();
+                });
+            });
+        </script>
     </section>
-    <!-- end section -->
-
-    <!-- start reframe section -->
-    <section style="background-color: #fdfbf5 !important; padding-bottom: 0;">
-        <div class="container">
-            <div class="row align-items-center justify-content-center mb-7 sm-mb-40px">
-                <div class="col-xl-5 col-lg-6 col-md-10 md-mb-50px"
-                    data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
-
-                    <h3 class="fw-600 text-dark-gray ls-minus-2px alt-font"
-                        data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        REFRAME</h3>
-                    <!-- start features box item -->
-                    <div class="icon-with-text-style-08 mb-10px">
-                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-
-                            <div class="feature-box-content">
-                                <span class="text-dark-gray">Reframe is a platform designed to connect and amplify the
-                                    work of refugee leaders across the world. From digital livelihoods and climate
-                                    change, to education and emergencies like the war in Sudan, refugee organisations
-                                    are on the frontline of the world’s biggest and most urgent crises. Whether you're a
-                                    storyteller, activist, organisation or donor, Reframe is a hub for refugees leading
-                                    positive change and inspiring action in their communities.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="icon-with-text-style-08">
-                        <div class="feature-box feature-box-left-icon-middle">
-                            <div
-                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                            </div>
-                            <div class="feature-box-content">
-                                <a href="index.html" target="blank"
-                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                    Visit reframe </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end features box item -->
-
-                </div>
-                <div class="col-lg-6 offset-xl-1 position-relative z-index-1"
-                    data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="atropos" data-atropos data-atropos-perspective="2450">
-                        <div class="atropos-scale">
-                            <div class="atropos-rotate">
-                                <div class="atropos-inner">
-                                    <img src="images-copy/Reframe gif(large).gif" alt="" class="border-radius-6px" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section> 
-
-
-    <!-- start sudan banner -->
-    <section class="p-0 three-quarter-screen ipad-top-space-margin position-relative overflow-hidden sm-h-auto">
-        <div class="container-fluid p-0 h-100 position-relative">
-            <div class="row h-100 g-0">
-                <div
-                    class="col-12 col-md-6  bg-solitude-cohere-orange d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px  sm-pt-50px sm-pb-50px order-1 order-md-2">
-
-                    <h3 class="fw-600 text-white ls-minus-2px alt-font"
-                        data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        SUPPORT SUDAN</h3>
-                      <!-- start features box item -->
-                      <div class="icon-with-text-style-08 mb-10px">
-                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-
-                            <div class="feature-box-content">
-                                <span class="text-white">Donate to Refugee-Led Organisations on the frontlines, responding to the urgent needs of displaced communities affected by the war. Your support helps deliver critical aid, shelter, healthcare, and hope. Together, we can rebuild lives. Get involved today!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="icon-with-text-style-08">
-                        <div class="feature-box feature-box-left-icon-middle">
-                            <div
-                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-white me-15px rounded-box">
-                                <i class="feather icon-feather-arrow-right text-dark-gray icon-small"></i>
-                            </div>
-                            <div class="feature-box-content">
-                                <a href="index.html" target="blank"
-                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-white text-dark-gray-hover">
-                                    <button onclick="https://reframe.network/">Visit reframe</button> </a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- end features box item -->
-                </div>
-                <div class="col-12 col-md-6 position-relative order-2 order-md-1">
-
-                    <div class="swiper h-100 banner-slider sm-h-450px swiper-light-pagination"
-                        data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "stopOnLastSlide": true, "disableOnInteraction": false },"keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
-                        <div class="swiper-wrapper">
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                    style="background-image:url('images-copy/sudan.jpg');"></div>
-                            </div>
-                            <!-- end slider item -->
-                            
-                           
-
-                        </div>
-                        <!-- start slider navigation -->
-                        <!-- <div class="slider-one-slide-prev-1 icon-very-small text-white swiper-button-prev slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutLeft icon-extra-large"></i></div>
-                                <div class="slider-one-slide-next-1 icon-very-small text-white swiper-button-next slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutRight icon-extra-large"></i></div> -->
-                        <!-- end slider navigation -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end banner -->
-
     
-
-     <!-- start unity banner -->
-<section class="p-0 three-quarter-screen ipad-top-space-margin position-relative overflow-hidden sm-h-auto">
-    <div class="container-fluid p-0 h-100 position-relative">
-        <div class="row h-100 g-0">
-            <!-- Image Column -->
-            <div class="col-12 col-md-6 position-relative order-2">
-                <div class="swiper h-100 banner-slider sm-h-450px swiper-light-pagination"
-                    data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "stopOnLastSlide": true, "disableOnInteraction": false },"keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
-                    <div class="swiper-wrapper">
-                        <!-- Slider Item -->
-                        <div class="swiper-slide">
-                            <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                style="background-image:url('images-copy/unity.png');"></div>
-                        </div>
-                        <!-- End Slider Item -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Text Column -->
-            <div class="col-12 col-md-6 bg-solitude-cohere-pink d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px sm-pt-50px sm-pb-50px order-1">
-                <h3 class="fw-600 text-white ls-minus-2px alt-font"
-                    data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                    UNITY
-                </h3>
-                <div class="icon-with-text-style-08 mb-10px">
-                    <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-
-                        <div class="feature-box-content">
-                            <span class="text-white">Unity is at the heart of what we do at Cohere. By coming together, we can create a world where every voice is heard, and refugee communities across the African continent have the resources they need to transform their futures. Get involved today!</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="icon-with-text-style-08"
-                    data-anime='{ "el": "childs", "translateX": [140, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="feature-box feature-box-left-icon-middle">
-                        <div
-                            class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                            <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                        </div>
-                        <div class="feature-box-content">
-                            <a href="index.html" target="blank"
-                                class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-white text-dark-gray-hover">
-                                Learn More </a>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end banner -->
-
-
-    <!-- start are we listening banner -->
-    <section class="p-0 three-quarter-screen ipad-top-space-margin position-relative overflow-hidden sm-h-auto">
-        <div class="container-fluid p-0 h-100 position-relative">
-            <div class="row h-100 g-0">
-                <div
-                    class="col-12 col-md-6 bg-solitude-cohere-black d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px  sm-pt-50px sm-pb-50px order-1 order-md-2">
-
-                    <h3 class="fw-600 text-white ls-minus-2px alt-font"
-                        data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        ARE WE ALL LISTENING?</h3>
-                      <!-- start features box item -->
-                      <div class="icon-with-text-style-08 mb-10px">
-                        <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-
-                            <div class="feature-box-content">
-                                <span class="text-white">With displacement rising, effective responses start by listening—to the expertise, experiences, and ideas of refugee leaders shaping solutions for their communities. Listening deepens our understanding, expands knowledge, and strengthens humanity. Together, we can amplify their voices and create lasting change.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="icon-with-text-style-08">
-                        <div class="feature-box feature-box-left-icon-middle">
-                            <div
-                                class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-white me-15px rounded-box">
-                                <i class="feather icon-feather-arrow-right text-dark-gray icon-small"></i>
-                            </div>
-                            <div class="feature-box-content">
-                                <a href="index.html" target="blank"
-                                    class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-white text-dark-gray-hover">
-                                    Visit reframe </a>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- end features box item -->
-                </div>
-                <div class="col-12 col-md-6 position-relative order-2 order-md-1">
-
-                    <div class="swiper h-100 banner-slider sm-h-450px swiper-light-pagination"
-                        data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "stopOnLastSlide": true, "disableOnInteraction": false },"keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
-                        <div class="swiper-wrapper">
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                    style="background-image:url('images-copy/Are\ we\ listening.jpg');"></div>
-                            </div>
-                            <!-- end slider item -->
-                            
-                           
-
-                        </div>
-                        <!-- start slider navigation -->
-                        <!-- <div class="slider-one-slide-prev-1 icon-very-small text-white swiper-button-prev slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutLeft icon-extra-large"></i></div>
-                                <div class="slider-one-slide-next-1 icon-very-small text-white swiper-button-next slider-navigation-style-06 d-none d-sm-inline-block"><i class="line-icon-Arrow-OutRight icon-extra-large"></i></div> -->
-                        <!-- end slider navigation -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end banner -->
-
-
-
-
-    <!-- start report section -->
-    <section style="background-color: #fdfbf5 !important; padding-bottom: 0; position: relative;">
-        <div class="container position-relative">
-            <div class="row align-items-center justify-content-between mb-7 sm-mb-40px">
-                <!-- Left Carousel Navigation Button (Moved Further Left) -->
-                <button class="carousel-control-prev dark-nav" type="button" data-bs-target="#reportsCarousel" data-bs-slide="prev" 
-                    style="position: absolute; left: -110px; top: 50%; transform: translateY(-50%); z-index: 10;">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
     
-                <div class="col-xl-5 col-lg-6 col-md-10 md-mb-50px"
-                    data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".vertical-counter");
+            counters.forEach(counter => {
+                const updateCounter = () => {
+                    const target = +counter.getAttribute("data-to");
+                    const current = +counter.innerText;
+                    const increment = Math.ceil(target / 200); // Adjust speed here
     
-                    <h3 class="fw-600 text-dark-gray ls-minus-2px alt-font"
-                        data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                        REPORTS
-                    </h3>
+                    if (current < target) {
+                        counter.innerText = current + increment;
+                        setTimeout(updateCounter, 10);
+                    } else {
+                        counter.innerText = target; // Ensure it lands on target
+                    }
+                };
+                updateCounter();
+            });
+        });
+    </script>
     
-                    <!-- Bootstrap Carousel for Reports -->
-                    <div id="reportsCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
-                            <div class="carousel-item active">
-                                <div class="icon-with-text-style-08">
-                                    <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-                                        <div class="feature-box-content">
-                                            <span class="text-dark-gray">
-                                                Cohere envisions a world where refugees and their hosting
-                                                communities are able to live fulfilled lives. Most of our programs
-                                                focus on partnerships with Refugee-Led Organizations (RLOs) and
-                                                Community-Based Organizations (CBOs).
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="icon-with-text-style-08">
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="report1.html" target="_blank" class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Read Full Report
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
     
-                            <!-- Slide 2 -->
-                            <div class="carousel-item">
-                                <div class="icon-with-text-style-08">
-                                    <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-                                        <div class="feature-box-content">
-                                            <span class="text-dark-gray">
-                                                Our second report focuses on sustainable programs that support refugee-led 
-                                                initiatives, fostering community-led solutions to long-term challenges.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="icon-with-text-style-08">
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="report2.html" target="_blank" class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Read Full Report
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
     
-                            <!-- Slide 3 -->
-                            <div class="carousel-item">
-                                <div class="icon-with-text-style-08">
-                                    <div class="feature-box feature-box-left-icon-middle overflow-hidden">
-                                        <div class="feature-box-content">
-                                            <span class="text-dark-gray">
-                                                The third report highlights our impact over the past year, including key 
-                                                statistics on how Cohere has supported local initiatives.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="icon-with-text-style-08">
-                                        <div class="feature-box feature-box-left-icon-middle">
-                                            <div class="feature-box-icon feature-box-icon-rounded w-55px h-55px rounded-circle bg-dark-gray me-15px rounded-box">
-                                                <i class="feather icon-feather-arrow-right text-white icon-small"></i>
-                                            </div>
-                                            <div class="feature-box-content">
-                                                <a href="report3.html" target="_blank" class="d-inline-block fs-20 ls-minus-05px alt-font fw-600 text-dark-gray text-dark-gray-hover">
-                                                    Read Full Report
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Report Image (Changes with Each Slide) -->
-                <div class="col-lg-6 offset-xl-1 position-relative z-index-1">
-                    <div class="atropos" data-atropos data-atropos-perspective="2450">
-                        <div class="atropos-scale">
-                            <div class="atropos-rotate">
-                                <div class="atropos-inner">
-                                    <img id="reportImage" style="width: 60%;" src="images-copy/report.png" alt=""
-                                        class="border-radius-6px" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Right Carousel Navigation Button -->
-                <button class="carousel-control-next dark-nav" type="button" data-bs-target="#reportsCarousel" data-bs-slide="next"
-                    style="position: absolute; right: -80px; top: 50%; transform: translateY(-50%); z-index: 10;">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-    
-            <!-- Carousel Indicators (Moved Below Text and Image) -->
-            <div class="text-center mt-5">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#reportsCarousel" data-bs-slide-to="0" class="active dark-indicator" aria-current="true" aria-label="Report 1"></button>
-                    <button type="button" data-bs-target="#reportsCarousel" data-bs-slide-to="1" class="dark-indicator" aria-label="Report 2"></button>
-                    <button type="button" data-bs-target="#reportsCarousel" data-bs-slide-to="2" class="dark-indicator" aria-label="Report 3"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- end section -->
-
-    <!-- start section -->
-    <section class="pt-0">
-        <div class="container">
-            <div class="row align-items-center mb-4"
-                data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <div class="col-md-6 text-center text-md-start sm-mb-20px">
-                    <h2 class="fw-600 text-dark-gray mb-0 ls-minus-3px alt-font">BLOGS & NEWS</h2>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="demo-digital-agency-blog.html"
-                        class="btn btn-link btn-hover-animation-switch primary-font text-dark-gray fs-18">
-                        <span>
-                            <span class="btn-text">Read all</span>
-                            <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                            <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 p-md-0">
-                    <ul class="blog-only-text blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-large"
-                        data-anime='{"el": "childs", "translateY": [0, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <li class="grid-sizer"></li>
-                        <!-- start blog item -->
-                        <li class="grid-item">
-                            <div class="card  border-radius-0px border-0 h-100 overflow-hidden"
-                                style="background-color: #ff9343;">
-                                <div class="card-body hover-box dark-hover p-15 lg-p-10">
-                                    <img src="images-copy/involved.jpg" class="hover-img" alt="">
-                                    <a href="#"
-                                        class="categories-btn ms-0 bg-white text-dark-gray text-uppercase fw-600 mb-70px">Branding</a>
-                                    <a href="#"
-                                        class="fs-13 text-uppercase d-block mb-5px text-dark-gray fw-500 mt-60px">Jonse
-                                        robbert</a>
-                                    <a href="demo-digital-agency-blog-single-creative.html"
-                                        class="card-title d-block fs-22 sm-fs-20 ls-minus-05px fw-500 text-dark-gray mb-0 w-90 lg-w-100">Design
-                                        can speak the in tongue of art force of commerce.</a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <li class="grid-item">
-                            <div class="card bg-base-color border-radius-0px border-0 h-100 overflow-hidden">
-                                <div class="card-body hover-box dark-hover p-15 lg-p-10">
-                                    <img src="images-copy/hero-cohere.jpg" class="hover-img" alt="">
-                                    <a href="#"
-                                        class="categories-btn ms-0 bg-white text-dark-gray text-uppercase fw-600 mb-70px">Design</a>
-                                    <a href="#"
-                                        class="fs-13 text-uppercase d-block mb-5px text-dark-gray fw-500 mt-60px">Den
-                                        viliamson</a>
-                                    <a href="demo-digital-agency-blog-single-creative.html"
-                                        class="card-title d-block fs-22 sm-fs-20 ls-minus-05px fw-500 text-dark-gray mb-0 w-90 lg-w-100">Simplicity
-                                        is process the obvious and adding meaningful.</a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- end blog item -->
-                        <!-- start blog item -->
-                        <li class="grid-item">
-                            <div class="card  border-radius-0px border-0 h-100 overflow-hidden"
-                                style="background-color: #ff6865;">
-                                <div class="card-body hover-box dark-hover p-15 lg-p-10">
-                                    <img src="images-copy/events.jpg" class="hover-img" alt="">
-                                    <a href="#"
-                                        class="categories-btn ms-0 bg-white text-dark-gray text-uppercase fw-600 mb-70px">Digital</a>
-                                    <a href="#"
-                                        class="fs-13 text-uppercase d-block mb-5px text-dark-gray fw-500 mt-60px">Rosald
-                                        smith</a>
-                                    <a href="demo-digital-agency-blog-single-creative.html"
-                                        class="card-title d-block fs-22 sm-fs-20 ls-minus-05px fw-500 text-dark-gray mb-0 w-90 lg-w-100">Good
-                                        design obvious, great design is more transparent.
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- end blog item -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end section -->
-
-    <!-- start footer -->
+   
     <footer class="pb-0">
         <div class="container">
             <div class="row">
@@ -885,50 +390,32 @@
                                         class="fab fa-instagram"></i></a></li>
                             <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i
                                         class="fab fa-twitter"></i></a></li>
-                            <li><a class="linkedin" href="http://www.twitter.com" target="_blank"><i
+                            <li><a class="linkedin" href="https://www.linkedin.com/company/importance-leadership/?viewAsMember=true" target="_blank"><i
                                         class="fab fa-linkedin"></i></a></li>
 
                         </ul>
                     </div>
 
                 </div>
-                <div
-                    class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-lg-2 order-md-3 sm-mb-20px">
-                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">Kenya </span>
-                    <p><strong class="text-dark-gray fw-600">Wamagata Court, Woodley, Nairobi</strong> <br>P.O Box
-                        61716-00200.</p>
-                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">UK </span>
-                    <p><strong class="text-dark-gray fw-600">Dean Farm, Oaksey, Malmesbury, Wilts,</strong> <br>SN16
-                        9SB, UK</p>
-
-                </div>
+                
                 <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
-                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">Uganda </span>
-                    <p><strong class="text-dark-gray fw-600">Hanlon Road. </strong> <br>Nsambya, Kampala</p>
+                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">Kenya </span>
+                    <p><strong class="text-dark-gray fw-600">Nairobi </strong> <br></p>
 
                 </div>
-                <div class="col-12 col-lg-3 col-xl-3 col-lg-4 col-md-6 order-lg-4 order-md-2 md-mb-30px sm-mb-0">
-                    <span class="fs-14 fw-600 d-block text-dark-gray mb-15px text-dark-gray text-uppercase">Sign up for
-                        the newsletter</span>
-                    <div class="d-inline-block w-100 newsletter-style-02 position-relative mb-10px">
-                        <form action="email-templates/subscribe-newsletter.php" method="post"
-                            class="position-relative w-100">
-                            <input class="input-small border-color-extra-medium-gray w-100 form-control required"
-                                type="email" name="email" placeholder="Enter your email...">
-                            <input type="hidden" name="redirect" value="">
-                            <button type="submit" class="btn submit" aria-label="submit"><i
-                                    class="icon bi bi-envelope icon-small text-dark-gray"></i></button>
-                            <div
-                                class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="d-inline-block fs-15"><i
-                                class="line-icon-Handshake me-10px align-middle icon-extra-medium"></i>Protecting your
-                            privacy</div>
-                    </div>
+                
+                <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
+                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">Canada </span>
+                    <p><strong class="text-dark-gray fw-600">Ontario</strong> <br></p>
+
                 </div>
+
+                <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
+                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">USA</span>
+                    <p><strong class="text-dark-gray fw-600">New Hampshire</strong> <br></p>
+
+                </div>
+
             </div>
             <div class="row justify-content-center align-items-center pt-5 sm-pt-35px">
                 <!-- start divider -->
@@ -939,9 +426,7 @@
                 <!-- start copyright -->
                 <div
                     class="col-lg-8 pt-15px pb-15px md-pt-0 fs-10 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
-                    <p>Cohere, Registered in. England and Wales, Registered Address: Dean Farm, Oaksey, Malmesbury,
-                        Wilts, SN16 9SB. UK Charity No: 1153638 / Uganda NGO cert. INDR10385305NB / Kenya NGO cert.
-                        OP.218/051/12-0511/8654.</p>
+                    <p>Importance Leadership Address</p>
                 </div>
                 <!-- end copyright -->
                 <!-- start footer menu -->
@@ -975,11 +460,9 @@
     <!-- Custom JS -->
     <script type="module" src="./customjs/fetchBlogs.js" defer></script>
     <script>
-        document.getElementById('reportsCarousel').addEventListener('slide.bs.carousel', function (event) {
-            let images = ["images-copy/report.png", "images-copy/report2.png", "images-copy/report3.png"];
-            document.getElementById('reportImage').src = images[event.to];
-        });
-        </script>
+   
+</script>
+
 </body>
 
 </html>
