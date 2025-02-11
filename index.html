@@ -40,7 +40,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="index.html" aria-label="Home">
-                    <img src="https://static.wixstatic.com/media/f273bc_b3caf8fb807d4c8590d97d1e93321328~mv2.png/v1/fill/w_263,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IL02.png" alt="Logo" class="logo-image">
+                    <img src="image/IL03 (2).jpg" alt="Logo" class="logo-image">
                 </a>
         
                 <!-- Hamburger Menu -->
@@ -58,10 +58,10 @@
                             <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Who We Are
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown">
-                                <li><a class="dropdown-item" href="#mission">Mission</a></li>
-                                <li><a class="dropdown-item" href="#vision">Vision</a></li>
-                                <li><a class="dropdown-item" href="#team">Team</a></li>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown" style="color:navy;">
+                                <li><a class="dropdown-item" style="color:navy" href="#mission">Mission</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#vision">Vision</a></li>
+                                <li><a class="dropdown-item"style="color:navy" href="#team">Team</a></li>
                             </ul>
                         </li>
         
@@ -70,23 +70,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 What We Do
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown">
-                                <li><a class="dropdown-item" href="#services">Services</a></li>
-                                <li><a class="dropdown-item" href="#usa">USA</a></li>
-                                <li><a class="dropdown-item" href="#kenya">Kenya</a></li>
-                                <li><a class="dropdown-item" href="#canada">Canada</a></li>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown" style="color:navy;">
+                                <li><a class="dropdown-item" style="color:navy" href="#services">Services</a></li>
+                                <li><a class="dropdown-item" style="color:navy"  href="#usa">USA</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#kenya">Kenya</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#canada">Canada</a></li>
                             </ul>
                         </li>
         
                         <!-- Impact Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="impactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#impact" id="impactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Impact
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="impactDropdown">
-                                <li><a class="dropdown-item" href="#facts">Facts & Figures</a></li>
-                                <li><a class="dropdown-item" href="#news">News</a></li>
-                                <li><a class="dropdown-item" href="#stories">Impact Stories</a></li>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="impactDropdown" style="color:navy;">
+                                <li><a class="dropdown-item" style="color:navy" href="#facts">Facts & Figures</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#facts">News</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#stories">Impact Stories</a></li>
                             </ul>
                         </li>
         
@@ -95,24 +95,13 @@
                             <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button">
                                 Donate
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="donateDropdown">
-                                <li><a class="dropdown-item" href="#makeGift">Make a Gift</a></li>
-                                <li><a class="dropdown-item" href="#donors">Donors</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="donateDropdown" >
+                                <li><a class="dropdown-item" style="color:navy" href="#makeGift">Make a Gift</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#donors">Donors</a></li>
                             </ul>
                         </li>
                         
-                        <!-- Connect With Us Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="connectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Connect With Us
-                            </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="connectDropdown">
-                                <li><a class="dropdown-item" href="#facebook">Facebook</a></li>
-                                <li><a class="dropdown-item" href="#linkedin">LinkedIn</a></li>
-                                <li><a class="dropdown-item" href="#email">Email</a></li>
-                                <li><a class="dropdown-item" href="#youtube">YouTube</a></li>
-                            </ul>
-                        </li>
+                    
         
                         <!-- Search Bar
                         <li class="nav-item ms-lg-1">
@@ -161,10 +150,9 @@
                     </div>
                     <div class="icon-with-text-style-08"
                         data-anime='{ "el": "childs", "translateX": [140, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <a href="index.html" target="blank">
-                            <button class="learn-more fw-600 text-dark-gray bg-base-color-hover">
-                                Learn More
-                            </button>
+                        
+                        <a href="Resources/About Importance Leadership.pdf" class="learn-more btn btn-primary" onclick="learnMore()">Learn More</a>
+
                            
                         </a>
                     </div>
@@ -179,9 +167,11 @@
                             <!-- Slide 1 -->
                             <div class="swiper-slide" aria-label="Slide 1: Description of the first image">
                                 <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                     style="background-image:url('image/Lead.jpg');" loading="lazy"></div>
+                                     style="background-color:navy;" loading="lazy"></div>
                                 <div class="position-absolute bottom-20px left-20px text-white">
-                                <p class="em"> <em>image 1</em></p>
+                                <p class="em"> <em>
+                                    <iframe width="864" height="486" src="https://www.youtube.com/embed/_rts2qZ2cK4" title="Future Leadership" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>Future Leadership</iframe>
+                                </em></p>
                                     
                                 </div>
                             </div>
@@ -189,27 +179,33 @@
                             <!-- Slide 2 -->
                             <div class="swiper-slide" aria-label="Slide 2: Description of the second image">
                                 <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                     style="background-image:url('image/pexels-liliana-drew-8498152.jpg');" loading="lazy"></div>
+                                     style="background-color:navy;" loading="lazy"></div>
                                 <div class="position-absolute bottom-20px left-20px text-white">
-                                   <p class="em"><em>image 2</em></p>
+                                   <p class="em"><em>
+                                    <iframe width="864" height="486" src="https://www.youtube.com/embed/-ds7EyJf6Ak" title="The Keys to Becoming a True Leader" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>The Keys to Becoming a True Leader</iframe>
+                                   </em></p>
                                     
                                 </div>
                             </div>
                         <!-- Slide 3 -->
                             <div class="swiper-slide" aria-label="Slide 2: Description of the second image">
                                 <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                     style="background-image:url('image/pexels-liliana-drew-8498152.jpg');" loading="lazy"></div>
+                                     style="background-color:navy;" loading="lazy"></div>
                                 <div class="position-absolute bottom-20px left-20px text-white">
-                                   <p class="em"><em>image 3</em></p>
+                                   <p class="em"><em>
+                                    <iframe width="864" height="486" src="https://www.youtube.com/embed/cLO54g5o2dE" title="The Power of Purpose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>The Power of Purpose</iframe>
+                                   </em></p>
                                     
                                 </div>
                             </div>
                             <!-- Slide 4 -->
                             <div class="swiper-slide" aria-label="Slide 3: Description of the third image">
                                 <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                     style="background-image:url('image/pexels-seyhmuskino-30616609.jpg');" loading="lazy"></div>
+                                     style="background-image:url('');" loading="lazy"></div>
                                 <div class="position-absolute bottom-20px left-20px text-white">
-                                   <p class="em"><em>image 4</em></p>
+                                   <p class="em"><em>
+                                    <iframe width="864" height="486" src="https://www.youtube.com/embed/BkcK_1OtNO8" title="The Keys to Freedom from Slavery Mindset" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>The Keys to Freedom from Slavery Mindset</iframe>
+                                   </em></p>
                                     
                                 </div>
                             </div>
@@ -223,12 +219,12 @@
     <!-- end banner -->
     <!-- start section -->
     
-    <section class="pb-5">
-        <div class="container">
+    <section class="pb-5" id="impact" style="background-color: rgba(15, 15, 48, 0.127);">
+        <div class="container" >
             <!-- Section Header -->
             <div class="col-xl-12 text-center mb-5">
                 <h3 class="alt-font text-black fw-bold ls-minus-3">IMPACT</h3>
-                <p class="fs-5 text-muted">Our journey of transforming communities and empowering youth leaders</p>
+                <p class="fs-5 text-info" style="font-style: italic;">Our journey of transforming communities and empowering youth leaders</p>
             </div>
     
             <!-- Tabs Navigation -->
@@ -242,7 +238,7 @@
             </ul>
     
             <!-- Tabs Content -->
-            <div class="tab-content">
+            <div class="tab-content" id="facts">
                 <!-- Facts & Figures -->
                 <div class="tab-pane fade show active" id="facts" role="tabpanel" aria-labelledby="facts-tab">
                     <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
@@ -251,7 +247,7 @@
                             <img src="image/pexels-divinetechygirl-1181274.jpg" alt="Youth Empowered" class="rounded-circle mb-3">
                             <h4 class="alt-font fw-600 text-dark-gray mb-2">Youth Empowered</h4>
                             <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="2500">0</h2>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="2500">0</h2>
                             <p class="text-muted mb-3">Creating opportunities for future leaders</p>
                         </div>
                         <!-- End Counter Item -->
@@ -261,7 +257,7 @@
                             <img src="image/pexels-renni-30516814.jpg" alt="Mentors" class="rounded-circle mb-3">
                             <h4 class="alt-font fw-600 text-dark-gray mb-2">Mentors</h4>
                             <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="20">0</h2>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="20">0</h2>
                             <p class="text-muted mb-3">Experienced leaders guiding the next generation</p>
                         </div>
                         <!-- End Counter Item -->
@@ -271,7 +267,7 @@
                             <img src="image/pexels-rdne-7414284.jpg" alt="Leadership Workshops" class="rounded-circle mb-3">
                             <h4 class="alt-font fw-600 text-dark-gray mb-2">Leadership Workshops</h4>
                             <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="13">0</h2>
+                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="13">0</h2>
                             <p class="text-muted mb-3">Inspiring change through impactful training</p>
                         </div>
                         <!-- End Counter Item -->
@@ -290,18 +286,28 @@
     
                 <!-- Impact Stories -->
                 <div class="tab-pane fade" id="stories" role="tabpanel" aria-labelledby="stories-tab">
-                    <div class="row g-4">
+                    <div class="row g-4" id="stories">
                         <!-- Story Item 1: Back-to-School -->
                         <div class="col-md-7">
                             <div class="card shadow-lg">
-                                <img src="image/pexels-liliana-drew-8498152.jpg" class="card-img-top" alt="Back-to-School Event impacting 100 refugees" loading="lazy">
+                                <img src="image/pexels-liliana-drew-8498152.jpg" class="card-img-left" alt="Back-to-School Event impacting 100 refugees" loading="lazy">
                                 <div class="card-body">
-                                    <h5 class="card-title fw-bold">Back-to-School: Empowering Refugee Orphans</h5>
+                                    <h5 class="card-title fw-bol">Back-to-School: Empowering Refugee Orphans</h5>
                                     <p class="card-text text-muted">
                                         This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential back-to-school equipment, including books, pens, pencils, and other supplies, ensuring they start the academic year on the right foot.
                                     </p>
-                                    <a href="#" class="btn btn-outline-success btn-sm">Read Full Story</a>
-                                </div>
+                                    <a 
+  href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop"  
+  class="btn btn-outline-success btn-sm" 
+  onclick="return warnUser()">Read Full Story</a>
+
+<script>
+  function warnUser() {
+    return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
+  }
+</script>
+
+                                 </div>
                             </div>
                         </div>
     
@@ -314,8 +320,18 @@
                                     <p class="card-text text-muted">
                                         We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. The session helped participants develop self-awareness, empathy, and relationship-building skills essential for personal and professional growth.
                                     </p>
-                                    <a href="#" class="btn btn-outline-success btn-sm">Read Full Story</a>
-                                </div>
+                                    <a 
+                                            href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop"  
+                                            class="btn btn-outline-success btn-sm" 
+                                            onclick="return warnUser()">Read Full Story</a>
+
+<script>
+  function warnUser() {
+    return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
+  }
+</script>
+
+                                 </div>
                             </div>
                         </div>
     
@@ -328,8 +344,35 @@
                                     <p class="card-text text-muted">
                                         On 8th February 2025, we hosted a Leadership Workshop attended by 60 participants. The workshop was designed to nurture leadership skills, empower decision-making, and inspire change within communities.
                                     </p>
-                                    <a href="#" class="btn btn-outline-success btn-sm">Read Full Story</a>
-                                </div>
+                                    <a 
+                                            href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop"  
+                                            class="btn btn-outline-success btn-sm" 
+                                            onclick="return warnUser()">Read Full Story</a>
+
+<script>
+  function warnUser() {
+    return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
+
+  }
+  
+  //a function for learnmore button on the home page
+
+  function learnMore() {
+    const learnMoreButton = document.querySelector('.learn-more');
+    learnMoreButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        learnMoreButton.innerHTML = 'Loading...';
+
+        // Simulate loading and then redirect to the PDF
+        setTimeout(() => {
+            window.location.href = 'Resources/About Importance Leadership.pdf'; 
+        }, 1000);
+    });
+}
+
+</script>
+
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -375,72 +418,7 @@
     
     
    
-    <footer class="pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-xl-3 col-lg-12 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-md-1">
-                    <a href="demo-digital-agency.html" class="footer-logo d-inline-block lg-mb-30px">
-                        <img src="images-copy/black-logo-no-bg.png" data-at2x="images-copy/black-logo-no-bg.png" alt="">
-                    </a>
-                    <div class="elements-social social-text-style-01 mt-auto">
-                        <ul class="small-icon dark fw-600">
-                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i
-                                        class="fab fa-facebook-f"></i></a></li>
-                            <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i
-                                        class="fab fa-instagram"></i></a></li>
-                            <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i
-                                        class="fab fa-twitter"></i></a></li>
-                            <li><a class="linkedin" href="https://www.linkedin.com/company/importance-leadership/?viewAsMember=true" target="_blank"><i
-                                        class="fab fa-linkedin"></i></a></li>
-
-                        </ul>
-                    </div>
-
-                </div>
-                
-                <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
-                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">Kenya </span>
-                    <p><strong class="text-dark-gray fw-600">Nairobi </strong> <br></p>
-
-                </div>
-                
-                <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
-                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">Canada </span>
-                    <p><strong class="text-dark-gray fw-600">Ontario</strong> <br></p>
-
-                </div>
-
-                <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
-                    <span class="fs-14 fw-600 d-block text-dark-gray text-dark-gray text-uppercase">USA</span>
-                    <p><strong class="text-dark-gray fw-600">New Hampshire</strong> <br></p>
-
-                </div>
-
-            </div>
-            <div class="row justify-content-center align-items-center pt-5 sm-pt-35px">
-                <!-- start divider -->
-                <div class="col-12">
-                    <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
-                </div>
-                <!-- end divider -->
-                <!-- start copyright -->
-                <div
-                    class="col-lg-8 pt-15px pb-15px md-pt-0 fs-10 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
-                    <p>Importance Leadership Address</p>
-                </div>
-                <!-- end copyright -->
-                <!-- start footer menu -->
-                <div class="col-lg-4 pt-15px pb-15px md-pb-5px fs-10 order-1 order-lg-2 text-center text-lg-end">
-                    <ul class="footer-navbar sm-lh-normal">
-                        <li><a href="#" class="nav-link">Privacy policy</a></li>
-                        <li><a href="#" class="nav-link">Terms and conditions</a></li>
-                        <li><a href="#" class="nav-link">Copyright</a></li>
-                    </ul>
-                </div>
-                <!-- end footer menu -->
-            </div>
-        </div>
-    </footer>
+    
     <!-- end footer -->
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
