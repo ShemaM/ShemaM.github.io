@@ -35,13 +35,14 @@
 </head>
 
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b" class="custom-cursor">
-    <!-- start page loader -->
-     <div id="preloader"></div>
-    <!-- end page loader -->
+   
+    <div id="header-container"></div>
+    <script src="loadHeader.js"></script>
+    
     <header>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
-            <div class="container-fluid">
+            <div class="container-fluid" style="background-color: #61b0d7">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="index.html" aria-label="Home">
                     <img src="image/IL02 (1).png" alt="Logo" class="logo-image">
@@ -59,19 +60,19 @@
         
                         <!-- Who We Are Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffff;">
                                 Who We Are
                             </a>
                             <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown" style="color:navy;">
                                 <li><a class="dropdown-item" style="color:navy" href="#mission">Mission</a></li>
                                 <li><a class="dropdown-item" style="color:navy" href="#vision">Vision</a></li>
-                                <li><a class="dropdown-item"style="color:navy" href="Our Team.html">Team</a></li>
+                                <li><a class="dropdown-item"style="color:navy" href="team.html">Team</a></li>
                             </ul>
                         </li>
         
                         <!-- What We Do Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffff;">
                                 What We Do
                             </a>
                             <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown" style="color:navy;">
@@ -82,21 +83,17 @@
                             </ul>
                         </li>
         
-                        <!-- Impact Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#impact" id="impactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <!-- Impact Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="impact.html" id="impactLink" style="color: #ffff;">
                                 Impact
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="impactDropdown" style="color:navy;">
-                                <li><a class="dropdown-item" style="color:navy" href="#facts">Facts & Figures</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#facts">News</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#impact-stories"  data-bs-toggle="tab" role="tab">Impact Stories</a></li>
-                            </ul>
                         </li>
+
         
                         <!-- Donate Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button">
+                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" style="color: #ffff;">
                                 Donate
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="donateDropdown" >
@@ -193,185 +190,7 @@
     <!-- end banner -->
     <!-- start section -->
     
-    <section class="pb-5" id="impact" style="background-color: rgba(15, 15, 48, 0.127);">
-        <div class="container" >
-            <!-- Section Header -->
-            <div class="col-xl-12 text-center mb-5">
-                <h3 class="alt-font text-black fw-bold ls-minus-3">IMPACT</h3>
-                <p class="fs-5 text-black" style="font-weight: bold;">Our journey of transforming communities and empowering youth leaders</p>
-            </div>
     
-            <!-- Tabs Navigation -->
-            <ul class="nav nav-tabs justify-content-center mb-4" id="impactTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="facts-tab" data-bs-toggle="tab" data-bs-target="#facts" type="button" role="tab" aria-controls="facts" aria-selected="true">Facts & Figures</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="stories-tab" data-bs-toggle="tab" data-bs-target="#stories" type="button" role="tab" aria-controls="stories" aria-selected="false">Impact Stories</button>
-                </li>
-            </ul>
-    
-            <!-- Tabs Content -->
-            <div class="tab-content" id="facts">
-                <!-- Facts & Figures -->
-                <div class="tab-pane fade show active" id="facts" role="tabpanel" aria-labelledby="facts-tab">
-                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-divinetechygirl-1181274.jpg" alt="Youth Empowered" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Youth Empowered</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="2500">0</h2>
-                            <p class="text-muted mb-3">Creating opportunities for future leaders</p>
-                        </div>
-                        <!-- End Counter Item -->
-    
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-renni-30516814.jpg" alt="Mentors" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Mentors</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="20">0</h2>
-                            <p class="text-muted mb-3">Experienced leaders guiding the next generation</p>
-                        </div>
-                        <!-- End Counter Item -->
-    
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-rdne-7414284.jpg" alt="Leadership Workshops" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Leadership Workshops</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="13">0</h2>
-                            <p class="text-muted mb-3">Inspiring change through impactful training</p>
-                        </div>
-                        <!-- End Counter Item -->
-    
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-anntarazevich-5598284.jpg" alt="Communities Impacted" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Communities Impacted</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="14">0</h2>
-                            <p class="text-muted mb-3">Reaching and transforming lives worldwide</p>
-                        </div>
-                        <!-- End Counter Item -->
-                    </div>
-                </div>
-    
-                <!-- Impact Stories -->
-               
-            </div>
-        </div>
-
-
-    
-        <section  class="pb-5" id="impact" style="background-color: rgba(15, 15, 48, 0.127);">   
-<div class="container">
-            <div class="tab-panel" id="impact-stories" role="tabpanel" aria-labelledby="impact-stories">
-                <div class="row g-4" id="stories">
-                    <!-- Story Item 1: Back-to-School -->
-                    <div class="col-md-7">
-                        <div class="card shadow-lg">
-                            <img src="image/pexels-liliana-drew-8498152.jpg" class="card-img-left" alt="Back-to-School Event impacting 100 refugees" loading="lazy">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bol">Back-to-School: Empowering Refugee Orphans</h5>
-                                <p class="card-text text-muted">
-                                    This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential back-to-school equipment, including books, pens, pencils, and other supplies, ensuring they start the academic year on the right foot.
-                                </p>
-                                <a 
-                        href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop"  
-                        class="btn btn-outline-success btn-sm" 
-                        onclick="return warnUser()">Read Full Story</a>
-
-<script>
-function warnUser() {
-return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
-}
-</script>
-
-                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Story Item 2: Emotional Intelligence Webinar -->
-                    <div class="col-md-3">
-                        <div class="card shadow-sm">
-                            <img src="image/pexels-rdne-7414284.jpg" class="card-img-top" alt="Emotional Intelligence Webinar impacting 50 youths" loading="lazy">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Webinar: Emotional Intelligence</h5>
-                                <p class="card-text text-muted">
-                                    We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. The session helped participants develop self-awareness, empathy, and relationship-building skills essential for personal and professional growth.
-                                </p>
-                                <a 
-                                        href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop"  
-                                        class="btn btn-outline-success btn-sm" 
-                                        onclick="return warnUser()">Read Full Story</a>
-
-<script>
-function warnUser() {
-return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
-}
-</script>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Story Item 3: Leadership Workshop -->
-                                                <div class="col-md-3">
-                                                    <div class="card shadow-sm">
-                                                        <img src="image/pexels-seyhmuskino-30616609.jpg" class="card-img-top" alt="Leadership Workshop with 60 participants" loading="lazy">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title fw-bold">Leadership Workshop</h5>
-                                                            <p class="card-text text-muted">
-                                                                On 8th February 2025, we hosted a Leadership Workshop attended by 60 participants. The workshop was designed to nurture leadership skills, empower decision-making, and inspire change within communities.
-                                                            </p>
-                                                            <a 
-                                                                    href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop"  
-                                                                    class="btn btn-outline-success btn-sm" 
-                                                                    onclick="return warnUser()">Read Full Story</a>
-     </div>
-<script>
-function warnUser() {
-return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
-
-}
-
-//a function for learnmore button on the home page
-
-function learnMore() {
-const learnMoreButton = document.querySelector('.learn-more');
-learnMoreButton.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the default link behavior
-    learnMoreButton.innerHTML = 'Loading...';
-
-    // Simulate loading and then redirect to the PDF
-    setTimeout(() => {
-        window.location.href = 'Resources/About Importance Leadership.pdf'; 
-    }, 1000);
-});
-}
-
-</script>
-
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Animation Script for Counters -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const counters = document.querySelectorAll('.vertical-counter');
-                counters.forEach(counter => {
-                    const countUp = new CountUp(counter, counter.getAttribute('data-to'));
-                    countUp.start();
-                });
-            });
-        </script>
-    </section>
     
     
     <script>
