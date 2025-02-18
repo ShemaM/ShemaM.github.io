@@ -19607,4 +19607,38 @@ br {
   width: 100% !important;
   height: 100%;
   object-fit: cover;
+} 
+
+/*  Footer Styles */
+.footer-container{
+  display:grid;
+  text-align: center;
+  justify-content:space-between;
+  grid-column: var(--red);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  color: whitesmoke;
+  font-weight: bold;
+  text-emphasis-color: white;
+
+}
+.links{
+  color: blue;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  justify-items: right;
+  text-emphasis-color: white;
+}
+.links:hover{
+  color:white;
+  text-decoration: underline;
+  cursor:pointer;
+
+}
+footer{
+  background-color: #123456;
+  padding: 20px;
+  margin-block-start: auto;
+  text-emphasis-color: white;
 }
