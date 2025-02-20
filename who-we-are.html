@@ -13,20 +13,17 @@
             background-color: #f8f9fa;
         }
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x600'); /* Replace with your image */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('image/hero-leadership.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
         }
         .hero-section h1 {
             font-size: 3.5rem;
             font-weight: bold;
-        }
-        .hero-section p {
-            font-size: 1.25rem;
-            margin-top: 20px;
         }
         .section-title {
             font-size: 2.5rem;
@@ -37,15 +34,34 @@
         .mission-section, .vision-section, .join-section {
             padding: 60px 0;
         }
-        .mission-section {
-            background-color: #ffffff;
-        }
         .vision-section {
-            background-color: #f8f9fa;
+            background-image: url('image/vision-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .vision-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .vision-content {
+            position: relative;
+            z-index: 2;
+        }
+        .vision-icons img {
+            max-width: 100px;
+            margin: 15px;
         }
         .join-section {
             background-color: #2c3e50;
             color: white;
+            text-align: center;
         }
         .join-section .btn {
             background-color: #e74c3c;
@@ -56,88 +72,61 @@
         .join-section .btn:hover {
             background-color: #c0392b;
         }
-        .footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
     <header id="header-container"></header>
     <script src="loadHeader.js"></script>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>Importance Leadership</h1>
-            <p>Empowering young people to discover their purpose and reach their full potential.</p>
+            <h1>Empowering Leaders, Inspiring Excellence</h1>
+            <p>Join us in shaping the next generation of visionary leaders.</p>
         </div>
     </section>
 
-    <!-- Mission Section -->
-    <section class="mission-section" id="mission">
+    <section class="mission-section text-center" id="mission">
         <div class="container">
-            <h2 class="section-title text-center">Our Mission</h2>
-            <p class="text-center">
-                At Importance Leadership, our mission is to <strong>Mobilize, Inspire, and Empower</strong> every youth to become change-makers through education and advocacy. We are committed to creating an inclusive world where every young person is empowered, transformed into a leader, and equipped with the opportunities and resources to unlock their full potential.
-            </p>
+            <h2 class="section-title">Our Mission</h2>
+            <p>At Importance Leadership, our mission is to <strong>Mobilize, Inspire, and Empower</strong> youth to become change-makers through education and advocacy.</p>
+            <img src="image/Leadership.jpg" alt="Mission Image" class="img-fluid mt-3 rounded shadow" style="max-width: 600px;">
         </div>
     </section>
 
-    <!-- What We Do Section -->
-    <section class="vision-section">
-        <div class="container">
-            <h2 class="section-title text-center">What We Do</h2>
-            <p class="text-center">
-                We strive to develop the next generation of influential and visionary leaders through our programs. Our initiatives include:
-            </p>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Leadership Training</li>
-                        <li class="list-group-item">Life Skills Development</li>
-                        <li class="list-group-item">Environmental Education</li>
-                        <li class="list-group-item">Sports and Recreational Activities</li>
-                        <li class="list-group-item">Student Engagement</li>
-                        <li class="list-group-item">Advocacy</li>
-                    </ul>
+    <section class="vision-section" id="vision">
+        <div class="vision-overlay"></div>
+        <div class="container vision-content">
+            <h2 class="section-title fw-bold">Our Vision</h2>
+            <hr class="divider mx-auto" style="width: 80px; height: 4px; background-color: #2859cdfe; border: none;">
+            <p class="lead mt-3">An inclusive world where every youth is empowered and transformed into a leader.</p>
+            <div class="row mt-4 justify-content-center vision-icons">
+                <div class="col-lg-4">
+                    <img src="image/IL02.png" alt="Leadership">
+                    <p>Leadership Development</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="image/pexels-anntarazevich-5598284.jpg" alt="Opportunities">
+                    <p>Equal Opportunities</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="image/pexels-divinetechygirl-1181274.jpg" alt="Innovation">
+                    <p>Innovation & Growth</p>
                 </div>
             </div>
-            <p class="text-center mt-4">
-                By promoting personal growth, building essential skills, and nurturing social consciousness, we aim to inspire excellence and cultivate a generation of empowered youth who will shape a brighter future for our global community.
-            </p>
         </div>
     </section>
 
-    <!-- Vision Section -->
-    <section class="mission-section" id="vision">
-        <div class="container">
-            <h2 class="section-title text-center">Our Vision</h2>
-            <p class="text-center">
-                <strong>Empowering Leaders, Inspiring Excellence</strong>
-            </p>
-            <p class="text-center">
-                An inclusive world where every youth is empowered and transformed into a leader with opportunities and resources to unlock their full potential.
-            </p>
-        </div>
-    </section>
-
-    <!-- Join Us Section -->
     <section class="join-section">
         <div class="container text-center">
             <h2 class="section-title">Join Us</h2>
-            <p>
-                Guided by our motto, <em>"Empowering Leaders, Inspiring Excellence,"</em> we are dedicated to transforming lives and empowering the next generation of change-makers. Join us in our mission to create a more equitable and inclusive world.
-            </p>
-            <a href="#" class="btn btn-primary">Be a Part of Change</a>
+            <p>Guided by our motto, <em>"Empowering Leaders, Inspiring Excellence,"</em> we are dedicated to transforming lives and empowering the next generation of change-makers.</p>
+            <img src="image/pexels-mikael-blomkvist-6476255.jpg" alt="Join Us" class="img-fluid mt-3 rounded shadow" style="max-width: 600px;">
+            <div class="mt-4">
+                <a href="joinus.html" class="btn btn-primary">Be a Part of Change</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-   <!-- Load Footer Script -->
-<script src="loadFooter.js"></script>
-
+    <script src="loadFooter.js"></script>
 </body>
 </html>

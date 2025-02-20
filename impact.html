@@ -31,20 +31,24 @@
         .impact-card {
             border: none;
             border-radius: 12px;
-            background: #fff;
+            background: #ffffff;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            padding: 20px;
+            text-align: center;
         }
         .impact-card:hover {
             transform: scale(1.03);
         }
-        .card-title {
-            font-weight: 700;
-            color: #222;
-        }
-        .card-text {
-            font-size: 1rem;
-            color: #555;
+        .impact-card:nth-child(1) { background-color: #d9edf7; }
+        .impact-card:nth-child(2) { background-color: #dff0d8; }
+        .impact-card:nth-child(3) { background-color: #fcf8e3; }
+        .impact-card:nth-child(4) { background-color: #f2dede; }
+        .divider {
+            width: 60px;
+            height: 4px;
+            background-color: #0056b3;
+            margin: 20px auto;
         }
         .btn-primary {
             background-color: #0056b3;
@@ -54,76 +58,160 @@
         .btn-primary:hover {
             background-color: #003d80;
         }
+
+        .impact-card {
+    height: 100%; /* Makes sure all cards are the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    text-align: center;
+}
+
+.divider {
+    border-top: 3px solid #ff7b00;
+    width: 50px;
+    margin: 8px auto;
+}
+
+.counter {
+    font-size: 2rem; /* Ensuring numbers are visually prominent */
+    margin: 8px 0;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
     </style>
 </head>
 <body>
 
-    
+    <!-- loading the header of the main page -->
+
     <div id="header-container"></div>
     <script src="loadHeader.js"></script>
-    
-    <section class="impact-section">
-        <div class="container">
-            <h2 class="impact-heading">Our Impact</h2>
-            <p class="impact-description">Transforming communities and empowering future leaders through education and mentorship.</p>
 
-            <div class="row text-center g-4 mt-4">
-                <div class="col-md-3" style="border: 2px solid #0056b3;">
-                    <div class="impact-card p-4">
-                        <h4>Youth Empowered</h4>
-                        <h2 class="fw-bold">2,500+</h2>
-                        <p>Opportunities for future leaders</p>
+    <!-- page content -->
+  
+    <section class="impact-section pb-5 pt-5" style="background: linear-gradient(135deg, #0d5080, #b3daff);">
+        <div class="container">
+            <div class="col-xl-12 text-center mb-4">
+                <h3 class="alt-font text-dark fw-bold text-uppercase ls-minus-2px">impact</h3>
+                <div class="container text-center fw-bold text-black">
+                    <p class="alt-font text-white fw-bold text-lowercase">We believe leadership is the key to inspiring action, driving change, and unlocking potential</p>
+
+                </div>
+             
+            </div>
+            <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 text-center g-4">
+                
+                <!-- Counter Item -->
+                <div class="col">
+                    <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                        <span class="alt-font fw-bold text-primary fs-5">Youth Empowered</span>
+                        <hr class="divider">
+                        <h2 class="fw-bold text-dark counter">2,500+</h2>
+                        <p class="text-secondary description">Opportunities for future leaders</p>
                     </div>
                 </div>
-                <div class="col-md-3"  style="border: 2px solid #0056b3;">
-                    <div class="impact-card p-4">
-                        <h4>Mentors</h4>
-                        <h2 class="fw-bold">20+</h2>
-                        <p>Guiding the next generation</p>
+    
+                <!-- Counter Item -->
+                <div class="col">
+                    <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                        <span class="alt-font fw-bold text-primary fs-5">Mentors</span>
+                        <hr class="divider">
+                        <h2 class="fw-bold text-dark counter">20+</h2>
+                        <p class="text-secondary description">Guiding the next generation</p>
                     </div>
                 </div>
-                <div class="col-md-3"  >
-                    <div class="impact-card p-4">
-                        <h4>Leadership Workshops</h4>
-                        <h2 class="fw-bold">13</h2>
-                        <p>Inspiring change through training</p>
+    
+                <!-- Counter Item -->
+                <div class="col">
+                    <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                        <span class="alt-font fw-bold text-primary fs-5">Leadership Workshops</span>
+                        <hr class="divider">
+                        <h2 class="fw-bold text-dark counter">13</h2>
+                        <p class="text-secondary description">Inspiring change through training</p>
                     </div>
                 </div>
-                <div class="col-md-3"  >
-                    <div class="impact-card p-4">
-                        <h4>Communities Impacted</h4>
-                        <h2 class="fw-bold">14</h2>
-                        <p>Transforming lives worldwide</p>
+    
+                <!-- Counter Item -->
+                <div class="col">
+                    <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                        <span class="alt-font fw-bold text-primary fs-5">Communities Impacted</span>
+                        <hr class="divider">
+                        <h2 class="fw-bold text-dark counter">14</h2>
+                        <p class="text-secondary description">Transforming lives worldwide</p>
                     </div>
                 </div>
+    
             </div>
         </div>
     </section>
+    
+    
 
     <section class="impact-section bg-light">
         <div class="container">
             <h2 class="impact-heading">Programs & Impact</h2>
-            <div class="row g-4 mt-4">
-                <div class="col-md-6">
-                    <div class="impact-card p-4">
-                        <h5 class="card-title">Back-to-School: Empowering Refugee Orphans</h5>
-                        <p class="card-text">This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential back-to-school equipment, ensuring they start the academic year on the right foot.</p>
-                        <a href="#" class="btn btn-primary">Read Full Story</a>
+            <div class="divider"></div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+                
+                <div class="col">
+                    <div class="impact-card d-flex flex-column h-100">
+                        <div class="flex-grow-1">
+                            <h5 class="alt-font fw-bold text-primary fs-5">Back-to-School: Empowering Refugee Orphans</h5>
+                            <hr class="divider">
+                            <p class="card-text">
+                                This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential 
+                                back-to-school equipment, ensuring they start the academic year on the right foot.
+                                <br>
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="impact-card p-4">
-                        <h5 class="card-title">Webinar: Emotional Intelligence</h5>
-                        <p class="card-text">We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. The session helped participants develop self-awareness and empathy.</p>
-                        <a href="#" class="btn btn-primary">Read Full Story</a>
+    
+                <div class="col">
+                    <div class="impact-card d-flex flex-column h-100">
+                        <div class="flex-grow-1">
+                            <h5 class="alt-font fw-bold text-primary fs-5">Webinar: Emotional Intelligence</h5>
+                            <hr class="divider">
+                            <p class="card-text">
+                                We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. 
+                                The session helped participants develop self-awareness and empathy.
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
                 </div>
+    
+                <div class="col">
+                    <div class="impact-card d-flex flex-column h-100">
+                        <div class="flex-grow-1">
+                            <h5 class="alt-font fw-bold text-primary fs-5">Financial Literacy for Refugees</h5>
+                            <hr class="divider">
+                            <p class="card-text">
+                                Partnering with experts, we conducted workshops that empowered over 80 refugees 
+                                with essential financial skills.
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </section>
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="loadFooter.js"></script>
-</body>
 
+    <!-- Load Footer Script -->
+<script src="loadFooter.js"></script>
+
+</body>
 </html>
