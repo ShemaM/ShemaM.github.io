@@ -4,241 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        .rounded-circle {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+        .impact-section {
+            padding: 80px 0;
         }
-        .vertical-counter {
+        .impact-heading {
             font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 20px;
         }
-        .card-img-left {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .impact-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+            color: #666;
         }
-        h1 {
-  display: block !important;
-  opacity: 1 !important;
-  color: blue !important;
-}
-
+        .impact-card {
+            border: none;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .impact-card:hover {
+            transform: scale(1.03);
+        }
+        .card-title {
+            font-weight: 700;
+            color: #222;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        .btn-primary {
+            background-color: #0056b3;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #003d80;
+        }
     </style>
-    
-  
 </head>
 <body>
-   <!-- loading the header of the main page -->
 
-   <div id="header-container"></div>
-   <script src="loadHeader.js"></script>
-
-
-     <!-- start page title -->
-     <section class="page-title-parallax-background half-section ipad-top-space-margin" data-parallax-background-ratio="0.5" ;">
-        <div class="opacity-extra-medium bg-gradient-dark-gray-brown"></div>
+    
+    <div id="header-container"></div>
+    <script src="loadHeader.js"></script>
+    
+    <section class="impact-section">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-12 text-center position-relative page-title-extra-large">
-                    <div class="d-flex flex-column small-screen">
-                        <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-500 ls-minus-1px"> The Leaders</h1>
-                        </div>
-                        <!-- start breadcrumb -->
-                        <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
-                            <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                                <li><a href="index.html" class="text-white">Home</a></li>
-                                <li>Impact</li>
-                            </ul>
-                        </div>
-                        <!-- end breadcrumb -->
+            <h2 class="impact-heading">Our Impact</h2>
+            <p class="impact-description">Transforming communities and empowering future leaders through education and mentorship.</p>
+
+            <div class="row text-center g-4 mt-4">
+                <div class="col-md-3" style="border: 2px solid #0056b3;">
+                    <div class="impact-card p-4">
+                        <h4>Youth Empowered</h4>
+                        <h2 class="fw-bold">2,500+</h2>
+                        <p>Opportunities for future leaders</p>
+                    </div>
+                </div>
+                <div class="col-md-3"  style="border: 2px solid #0056b3;">
+                    <div class="impact-card p-4">
+                        <h4>Mentors</h4>
+                        <h2 class="fw-bold">20+</h2>
+                        <p>Guiding the next generation</p>
+                    </div>
+                </div>
+                <div class="col-md-3"  >
+                    <div class="impact-card p-4">
+                        <h4>Leadership Workshops</h4>
+                        <h2 class="fw-bold">13</h2>
+                        <p>Inspiring change through training</p>
+                    </div>
+                </div>
+                <div class="col-md-3"  >
+                    <div class="impact-card p-4">
+                        <h4>Communities Impacted</h4>
+                        <h2 class="fw-bold">14</h2>
+                        <p>Transforming lives worldwide</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-   
-    <section class="pb-5" id="impact" style="background-color: rgba(15, 15, 48, 0.127);">
+    <section class="impact-section bg-light">
         <div class="container">
-            <!-- Section Header -->
-            <div class="col-xl-12 text-center mb-5">
-                <h3 class="alt-font text-black fw-bold ls-minus-3">IMPACT</h3>
-                <p class="fs-5 text-black" style="font-weight: bold;">Our journey of transforming communities and empowering youth leaders</p>
-            </div>
-
-            
-            <!-- Tabs Navigation -->
-            <ul class="nav nav-tabs justify-content-center mb-4" id="impactTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="facts-tab" data-bs-toggle="tab" data-bs-target="#facts" type="button" role="tab" aria-controls="facts" aria-selected="true">Facts & Figures</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="stories-tab" data-bs-toggle="tab" data-bs-target="#stories" type="button" role="tab" aria-controls="stories" aria-selected="false">Impact Stories</button>
-                </li>
-            </ul>
-
-            
-
-            <!-- Tabs Content -->
-            <div class="tab-content" id="impactTabsContent">
-                <!-- Facts & Figures -->
-                <div class="tab-pane fade show active" id="facts" role="tabpanel" aria-labelledby="facts-tab">
-                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-divinetechygirl-1181274.jpg" alt="Youth Empowered" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Youth Empowered</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="2500">0</h2>
-                            <p class="text-muted mb-3">Creating opportunities for future leaders</p>
-                        </div>
-                        <!-- End Counter Item -->
-
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-renni-30516814.jpg" alt="Mentors" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Mentors</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="20">0</h2>
-                            <p class="text-muted mb-3">Experienced leaders guiding the next generation</p>
-                        </div>
-                        <!-- End Counter Item -->
-
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-rdne-7414284.jpg" alt="Leadership Workshops" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Leadership Workshops</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" data-to="13">0</h2>
-                            <p class="text-muted mb-3">Inspiring change through impactful training</p>
-                        </div>
-                        <!-- End Counter Item -->
-
-                        <!-- Start Counter Item -->
-                        <div class="col text-center">
-                            <img src="image/pexels-anntarazevich-5598284.jpg" alt="Communities Impacted" class="rounded-circle mb-3">
-                            <h4 class="alt-font fw-600 text-dark-gray mb-2">Communities Impacted</h4>
-                            <hr>
-                            <h2 class="vertical-counter alt-font text-dark-gray fw-700" style="color: navy;" data-to="14">0</h2>
-                            <p class="text-muted mb-3">Reaching and transforming lives worldwide</p>
-                        </div>
-                        <!-- End Counter Item -->
+            <h2 class="impact-heading">Programs & Impact</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6">
+                    <div class="impact-card p-4">
+                        <h5 class="card-title">Back-to-School: Empowering Refugee Orphans</h5>
+                        <p class="card-text">This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential back-to-school equipment, ensuring they start the academic year on the right foot.</p>
+                        <a href="#" class="btn btn-primary">Read Full Story</a>
                     </div>
                 </div>
-
-                <!-- Impact Stories -->
-                <div class="tab-pane fade" id="stories" role="tabpanel" aria-labelledby="stories-tab">
-                    <div class="row g-4">
-                        <!-- Story Item 1: Back-to-School -->
-                        <div class="col-md-7">
-                            <div class="card shadow-lg">
-                                <img src="image/pexels-liliana-drew-8498152.jpg" class="card-img-left" alt="Back-to-School Event impacting 100 refugees" loading="lazy">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Back-to-School: Empowering Refugee Orphans</h5>
-                                    <p class="card-text text-muted">
-                                        This event touched the lives of over 100 refugee orphans in Nairobi. We provided essential back-to-school equipment, including books, pens, pencils, and other supplies, ensuring they start the academic year on the right foot.
-                                    </p>
-                                    <a href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop" class="btn btn-outline-success btn-sm" onclick="return warnUser()">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Story Item 2: Emotional Intelligence Webinar -->
-                        <div class="col-md-3">
-                            <div class="card shadow-sm">
-                                <img src="image/pexels-rdne-7414284.jpg" class="card-img-top" alt="Emotional Intelligence Webinar impacting 50 youths" loading="lazy">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Webinar: Emotional Intelligence</h5>
-                                    <p class="card-text text-muted">
-                                        We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. The session helped participants develop self-awareness, empathy, and relationship-building skills essential for personal and professional growth.
-                                    </p>
-                                    <a href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop" class="btn btn-outline-success btn-sm" onclick="return warnUser()">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Story Item 3: Leadership Workshop -->
-                        <div class="col-md-3">
-                            <div class="card shadow-sm">
-                                <img src="image/pexels-seyhmuskino-30616609.jpg" class="card-img-top" alt="Leadership Workshop with 60 participants" loading="lazy">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Leadership Workshop</h5>
-                                    <p class="card-text text-muted">
-                                        On 8th February 2025, we hosted a Leadership Workshop attended by 60 participants. The workshop was designed to nurture leadership skills, empower decision-making, and inspire change within communities.
-                                    </p>
-                                    <a href="https://www.linkedin.com/posts/importance-leadership_backschtoschoolinitiative-kasarani-highlightsoftheday-activity-7279604441677254656-w_4c?utm_source=share&utm_medium=member_desktop" class="btn btn-outline-success btn-sm" onclick="return warnUser()">Read Full Story</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-6">
+                    <div class="impact-card p-4">
+                        <h5 class="card-title">Webinar: Emotional Intelligence</h5>
+                        <p class="card-text">We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. The session helped participants develop self-awareness and empathy.</p>
+                        <a href="#" class="btn btn-primary">Read Full Story</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const counters = document.querySelectorAll(".vertical-counter");
-            counters.forEach(counter => {
-                const updateCounter = () => {
-                    const target = +counter.getAttribute("data-to");
-                    const current = +counter.innerText;
-                    const increment = Math.ceil(target / 200); // Adjust speed here
-    
-                    if (current < target) {
-                        counter.innerText = current + increment;
-                        setTimeout(updateCounter, 10);
-                    } else {
-                        counter.innerText = target; // Ensure it lands on target
-                    }
-                };
-                updateCounter();
-            });
-        });
 
-        document.addEventListener("DOMContentLoaded", function () {
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-container").innerHTML = data;
-            setTimeout(generateBreadcrumb, 100); // Add a slight delay
-        })
-        .catch(error => console.error("Error loading header:", error));
-});
-
-    </script>
-    
-    <!-- Bootstrap JS and Dependencies -->
-     <script src=""></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <!-- CountUp.js for Counter Animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
-    <script>
-        // Counter Animation
-        document.addEventListener('DOMContentLoaded', function () {
-            const counters = document.querySelectorAll('.vertical-counter');
-            counters.forEach(counter => {
-                const countUp = new CountUp(counter, counter.getAttribute('data-to'));
-                countUp.start();
-            });
-        });
-
-        // LinkedIn Link Warning
-        function warnUser() {
-            return confirm("You are about to leave our website and be redirected to LinkedIn. Do you want to proceed?");
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="loadFooter.js"></script>
 </body>
+
 </html>
