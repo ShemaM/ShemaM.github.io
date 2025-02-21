@@ -27,10 +27,10 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="index.css" />
 
 <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script
     
 </head>
 
@@ -42,7 +42,7 @@
     <header>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
-            <div class="container-fluid" style="background-color: #78a7bf">
+            <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="index.html" aria-label="Home">
                     <img src="image/IL02 (1).png" alt="Logo" class="logo-image">
@@ -64,8 +64,8 @@
                                 Who We Are
                             </a>
                             <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown" style="color:navy;">
-                                <li><a class="dropdown-item" style="color:navy" href="who-we-are.html">Mission</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#who-we-are.html">Vision</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="who-we-are.html#mission">Mission</a></li>
+                                <li><a class="dropdown-item" style="color:navy" href="#who-we-are.html#vision">Vision</a></li>
                                 <li><a class="dropdown-item"style="color:navy" href="team.html">Team</a></li>
                             </ul>
                         </li>
@@ -130,34 +130,40 @@
         <div class="container-fluid p-0 h-100 position-relative">
             <div class="row h-100 g-0">
                 <!-- Left Column -->
-                <div
-                    class="col-12 col-md-6 bg-base-color bg-sliding-line d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px  sm-pt-50px sm-pb-50px order-2 order-md-1">
+                
+                <div class="col-12 col-md-6 bg-base-color bg-sliding-line d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px sm-pt-50px sm-pb-50px order-2 order-md-1 bg-faint">
 
-                    <div class="fs-40px sm-fs-60 lh-65 fw-600 text-dark-gray mb-50px sm-mb-30px alt-font ls-minus-1px sm-ls-minus-1px"
+                    <!-- Headings -->
+                    <div class="position-relative z-index-9 text-dark-gray mb-50px sm-mb-30px alt-font fw-600 fs-40px sm-fs-60 lh-65 ls-minus-1px sm-ls-minus-1px"
                         data-anime='{ "el": "childs", "translateX": [80, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="position-relative z-index-9">
-                            <div class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="1000">
-                                EMPOWERING YOUNG PEOPLE
-                            </div>
-                            <div class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="2000">
-                                TO BECOME LEADERS
-                            </div>
-                        </div>
+                        
+                        <h2 class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="1000">
+                            EMPOWERING YOUNG PEOPLE
+                        </h2>
+                        <h2 class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="2000">
+                            TO BECOME LEADERS
+                        </h2>
                     </div>
-                    <div class="fs-20 sm-fs-18 text-dark-gray mb-20px w-70 xxl-w-100 lg-w-100 sm-w-90 d-block"
+                
+                    <!-- Description -->
+                    <div class="fs-20 sm-fs-18 text-dark-gray mb-20px w-70 xxl-w-100 lg-w-100 sm-w-90"
                         data-anime='{ "el": "childs", "translateX": [110, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <span class="d-inline-block opacity-8">
-                            Importance Leadership empowers diverse youth to become ethical, inclusive, and purpose-driven leaders who drive sustainable global change. Join us in shaping a just, equitable, and transformative future..</span>
+                        <p class="opacity-10">
+                            Importance Leadership empowers diverse youth to become ethical, inclusive, and purpose-driven leaders who drive sustainable global change. Join us in shaping a just, equitable, and transformative future.
+                        </p>
                     </div>
+                
+                    <!-- Call to Action -->
                     <div class="icon-with-text-style-08"
                         data-anime='{ "el": "childs", "translateX": [140, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                         
-                        <a href="Resources/About Importance Leadership.pdf" class="learn-more btn btn-primary" onclick="learnMore()">Learn More</a>
-
-                           
+                        <a href="Resources/About Importance Leadership.pdf" class="btn btn-primary learn-more">
+                            Learn More
                         </a>
                     </div>
+                
                 </div>
+                
     
                 <!-- Right Column -->
                 <div class="col-12 col-md-6 position-relative order-1 order-md-2">
@@ -172,8 +178,16 @@
                                 </div>
                                 <div class="position-absolute bottom-20px left-20px text-white">
                                 <p class="em"> <em>
-                                    <iframe width="864" height="486" src="https://www.youtube.com/embed/_rts2qZ2cK4" title="Future Leadership" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>Future Leadership</iframe>
-                                </em></p>
+                                            <iframe width="764" height="656" 
+                                                                    src="https://www.youtube.com/embed/-ds7EyJf6Ak?start=30&end=120" 
+                                                                    title="The Keys to Becoming a True Leader" 
+                                                                    frameborder="0" 
+                                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                                                    allowfullscreen>
+                                             </iframe>
+
+                                   </em></p>
                                     
                                 </div>
                             </div>

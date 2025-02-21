@@ -83,6 +83,34 @@
     line-height: 1.5;
     margin-top: 5px;
 }
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Places video behind content */
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the section */
+}
+
+.impact-section {
+    position: relative;
+    z-index: 1;
+    color: #123456;
+    padding: 60px 0;
+}
+
+
 
     </style>
 </head>
@@ -96,11 +124,24 @@
     <!-- page content -->
   
     <section class="impact-section pb-5 pt-5" style="background: linear-gradient(135deg, #0d5080, #b3daff);">
+
+         <!--video container-->
+         <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="image/2583475-hd_1920_1080_24fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
         <div class="container">
             <div class="col-xl-12 text-center mb-4">
-                <h3 class="alt-font text-dark fw-bold text-uppercase ls-minus-2px">impact</h3>
+                <h2 class="impact-heading" style="color:#ff7b00; background: #333; display: inline-block; padding: 5px;">
+                    Impact
+                </h2>
+                
                 <div class="container text-center fw-bold text-black">
-                    <p class="alt-font text-white fw-bold text-lowercase">We believe leadership is the key to inspiring action, driving change, and unlocking potential</p>
+                    <p class="alt-font text-white fw-bold text-lowercase fs-24 bg-base-color-cream">We believe leadership is the key to inspiring action, driving change, and unlocking potential</p>
 
                 </div>
              
@@ -153,33 +194,54 @@
     
     
 
-    <section class="impact-section bg-light">
+    <section class="impact-section">
+        
+       
+
         <div class="container">
-            <h2 class="impact-heading">Programs & Impact</h2>
-            <p class="impact-description">
-                
-Our transformative programs are designed to transform the next generation of influential and visionary leaders. Guided by our vision of an inclusive world where every youth is empowered and equipped to unlock their full potential, Importance Leadership is committed to mobilizing, inspiring, and empowering young individuals to become impactful change-makers.
 
-Program Objectives:
-<ol class=" list-group list-group-numbered">
-    <li>To develop essential leadership skills and competencies among the youth.</li>
-
-    <li>To provide mentorship, networking, and hands-on experiences that promote personal and professional growth.</li>
-
-    <li>To inspire and empower young individuals to become agents of positive change in their communities.</li>
-
-    <li>To create a supportive ecosystem that enables youth to access resources and opportunities to discover their aspirations.</li>
-</ol>
-
-</p>
+            <h2 class="impact-heading" style="color:#ff7b00;">Programs</h2>
+            <div class="container my-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h4 class="text-primary fw-bold">Our Transformative Programs</h4>
+                        <p class="text-muted mt-3 color-666">
+                            Our transformative programs are designed to shape the next generation of influential and visionary leaders. 
+                            Guided by our vision of an inclusive world where every youth is empowered and equipped to unlock their full potential, 
+                            <strong>Importance Leadership</strong> is committed to mobilizing, inspiring, and empowering young individuals to become impactful change-makers.
+                        </p>
+                        <h5 class="mt-4 text-dark fw-semibold">Our Program Objectives:</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To develop essential leadership skills and competencies among the youth.
+                            </li>
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To provide mentorship, networking, and hands-on experiences that promote personal and professional growth.
+                            </li>
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To inspire and empower young individuals to become agents of positive change in their communities.
+                            </li>
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To create a supportive ecosystem that enables youth to access resources and opportunities to discover their aspirations.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
 
             <div class="divider"></div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
                 
                 <div class="col">
+                    <a href="your-target-link.html" class="text-decoration-none">
                     <div class="impact-card d-flex flex-column h-100">
                         <div class="flex-grow-1">
-                            <h3 class="alt-font fw-bold text-primary fs-5">Community Engagement</h3>
+                            <h3 class="alt-font fw-bold text-primary">Community Engagement</h3>
                             <h5 class="alt-font fw-bold text-primary fs-5">Back-to-School: Empowering Refugee Orphans</h5>
                             <hr class="divider">
                             <p class="card-text">
@@ -188,41 +250,52 @@ Program Objectives:
                                 <br>
                             </p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                        <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
+                </a>
                 </div>
     
                 <div class="col">
-                    <div class="impact-card d-flex flex-column h-100">
-                        <div class="flex-grow-1">
-                            <h3 class="alt-font fw-bold text-primary fs-5">Leadership</h3>
-                            <h5 class="alt-font fw-bold text-primary fs-5">Webinar: Emotional Intelligence</h5>
-                            <hr class="divider">
-                            <p class="card-text">
-                                We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. 
-                                The session helped participants develop self-awareness and empathy.
-                            </p>
+                    <a href="your-target-link.html" class="text-decoration-none">
+                        <div class="impact-card d-flex flex-column h-100">
+                            <div class="flex-grow-1">
+                                <h3 class="alt-font fw-bold text-primary">Leadership</h3>
+                                <h5 class="alt-font fw-bold text-primary fs-5">Webinar: Emotional Intelligence</h5>
+                                <hr class="divider">
+                                <p class="card-text">
+                                    We hosted an inspiring webinar on Emotional Intelligence that had 50 youths tuned in. 
+                                    The session helped participants develop self-awareness and empathy.
+                                </p>
+                            </div>
+                            <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
-                    </div>
+                    </a>
                 </div>
+                
     
                 <div class="col">
+                    <a href="your-target-link.html" class="text-decoration-none">
                     <div class="impact-card d-flex flex-column h-100">
                         <div class="flex-grow-1">
-                            <h5 class="alt-font fw-bold text-primary fs-5">Financial Literacy for Refugees</h5>
+                            <h5 class="alt-font fw-bold text-primary fs-5">Financial Literacy </h5>
                             <hr class="divider">
+                            <div>
+                                <br>
+                            </div>
                             <p class="card-text">
+
                                 Partnering with experts, we conducted workshops that empowered over 80 refugees 
                                 with essential financial skills.
                             </p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                        <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
+                    </a>
                 </div>
 
                 <!--Environmental Impact-->
                 <div class="col">
+                    <a href="your-target-link.html" class="text-decoration-none">
                     <div class="impact-card d-flex flex-column h-100">
                         <div class="flex-grow-1">
                             <h5 class="alt-font fw-bold text-primary fs-5">Environmental Health</h5>
@@ -232,12 +305,14 @@ Program Objectives:
                                 with essential financial skills.
                             </p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                        <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
+                    </a>
                 </div>
 
                 <!--Advocacy-->
                 <div class="col">
+                    <a href="your-target-link.html" class="text-decoration-none">
                     <div class="impact-card d-flex flex-column h-100">
                         <div class="flex-grow-1">
                             <h5 class="alt-font fw-bold text-primary fs-5">Advocacy</h5>
@@ -247,12 +322,14 @@ Program Objectives:
                                 with essential financial skills.
                             </p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                        <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
+                    </a>
                 </div>
 
                 <!--Sports-->
                 <div class="col">
+                    <a href="your-target-link.html" class="text-decoration-none">
                     <div class="impact-card d-flex flex-column h-100">
                         <div class="flex-grow-1">
                             <h5 class="alt-font fw-bold text-primary fs-5">Sports Programs</h5>
@@ -262,12 +339,14 @@ Program Objectives:
                                 with essential financial skills.
                             </p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                        <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
+                    </a>
                 </div>
 
                 <!--Mental Health-->
                 <div class="col">
+                    <a href="your-target-link.html" class="text-decoration-none">
                     <div class="impact-card d-flex flex-column h-100">
                         <div class="flex-grow-1">
                             <h5 class="alt-font fw-bold text-primary fs-5">Mental Health Program</h5>
@@ -275,18 +354,13 @@ Program Objectives:
                             <p class="card-text">
                               
 Workshops and seminars on mental health and wellbeing: Participants will engage in sessions that promote self-awareness, stress management, and emotional intelligence, equipping them with tools to maintain a healthy mindset.
-
-​
-
 Peer support networks and counseling services: Importance Leadership will collaborate with mental health professionals and create a supportive environment where participants can share their experiences and receive guidance.
-
-​
-
 Wellness activities: The program will incorporate practices such as mindfulness, yoga, and arts-based therapies to foster participants' overall mental and physical well-being.  
                             </p>
                         </div>
-                        <a href="#" class="btn btn-primary mt-auto">Read Full Story</a>
+                        <a href="your-target-link.html" class="btn btn-primary mt-auto">Read Full Story</a>
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
