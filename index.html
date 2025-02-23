@@ -1,261 +1,266 @@
-﻿<!doctype html>
-<html class="no-js" lang="en">
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title> Importance Leadership</title>
-    <link rel="icon" type="png" href="images/IL02 (1).jpg">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="icon" content="Importance Leadership">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importance Leadership</title>
     <meta name="description"
         content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
-    <!-- favicon icon -->
-    <link rel="shortcut icon" href="images/favicon.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     
-    <!-- google fonts preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- style sheets and font icons  -->
-    <link rel="stylesheet" href="css/icon.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link rel="stylesheet" href="index.css" />
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+  
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+        }
+
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            max-height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #2c3e50 !important;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            border: none;
+            padding: 10px 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .banner-section {
+            padding: 100px 0;
+        }
+
+        .banner-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .banner-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .swiper {
+            height: 100%;
+        }
+
+        .swiper-slide iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+    </style>
 </head>
 
-<body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b" class="custom-cursor">
-   
-    <div id="header-container"></div>
-    <script src="loadHeader.js"></script>
-    
+<body>
+    <!-- Header -->
     <header>
-        <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand logo" href="index.html" aria-label="Home">
-                    <img src="image/IL02 (1).png" alt="Logo" class="logo-image">
+                <a class="navbar-brand" href="index.html">
+                    <img src="image/IL02 (1).png" alt="Importance Leadership Logo" class="logo-image">
                 </a>
-        
+                
                 <!-- Hamburger Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+                
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        
                         <!-- Who We Are Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffff;">
+                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Who We Are
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown" style="color:navy;">
-                                <li><a class="dropdown-item" style="color:navy" href="who-we-are.html#mission">Mission</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#who-we-are.html#vision">Vision</a></li>
-                                <li><a class="dropdown-item"style="color:navy" href="team.html">Team</a></li>
-                            </ul>
-                        </li>
-        
-                        <!-- What We Do Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffff;">
-                                What We Do
-                            </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown" style="color:navy;">
-                                <li><a class="dropdown-item" style="color:navy" href="#services">Services</a></li>
-                                <li><a class="dropdown-item" style="color:navy"  href="#usa">USA</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#kenya">Kenya</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#canada">Canada</a></li>
-                            </ul>
-                        </li>
-        
-                                                <!-- Impact Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="impact.html" id="impactLink" style="color: #ffff;">
-                                Impact
-                            </a>
-                        </li>
-
-        
-                        <!-- Donate Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" style="color: #ffff;">
-                                Donate
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="donateDropdown" >
-                                <li><a class="dropdown-item" style="color:navy" href="#makeGift">Make a Gift</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="#donors">Donors</a></li>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown">
+                                <li><a class="dropdown-item" href="who-we-are.html#about">About</a></li>
+                                <li><a class="dropdown-item" href="who-we-are.html#mission">Mission</a></li>
+                                <li><a class="dropdown-item" href="who-we-are.html#vision">Vision</a></li>
+                                <li><a class="dropdown-item" href="team.html">Team</a></li>
                             </ul>
                         </li>
                         
-                    
-        
-                        <!-- Search Bar
-                        <li class="nav-item ms-lg-1">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-primary" type="submit">Search</button>
-                            </form>
+                        <!-- What We Do Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                What We Do
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown">
+                                <li><a class="dropdown-item" href="#services">Services</a></li>
+                                <li><a class="dropdown-item" href="#usa">USA</a></li>
+                                <li><a class="dropdown-item" href="#kenya">Kenya</a></li>
+                                <li><a class="dropdown-item" href="#canada">Canada</a></li>
+                            </ul>
                         </li>
-         -->
+                        
+                        <!-- Impact Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="impact.html">Impact</a>
+                        </li>
+                        
+                        <!-- Donate Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Donate
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="donateDropdown">
+                                <li><a class="dropdown-item" href="#makeGift">Make a Gift</a></li>
+                                <li><a class="dropdown-item" href="#donors">Donors</a></li>
+                            </ul>
+                        </li>
+                        
                         <!-- Call-to-Action Button -->
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-primary" href="#donate" role="button">Donate Now</a>
+                            <a class="btn btn-primary" href="#donate">Donate Now</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
     </header>
 
-
-    <!-- start banner -->
-    <!-- start banner -->
-    <section class="p-0 full-screen ipad-top-space-margin position-relative overflow-hidden sm-h-auto">
-        <div class="container-fluid p-0 h-100 position-relative">
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="container-fluid h-100">
             <div class="row h-100 g-0">
                 <!-- Left Column -->
-                
-                <div class="col-12 col-md-6 bg-base-color bg-sliding-line d-flex justify-content-center flex-column p-10 position-relative xl-p-6 md-p-5 sm-ps-30px sm-pe-30px sm-pt-50px sm-pb-50px order-2 order-md-1 bg-faint">
-
-                    <!-- Headings -->
-                    <div class="position-relative z-index-9 text-dark-gray mb-50px sm-mb-30px alt-font fw-600 fs-40px sm-fs-60 lh-65 ls-minus-1px sm-ls-minus-1px"
-                        data-anime='{ "el": "childs", "translateX": [80, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        
-                        <h2 class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="1000">
-                            EMPOWERING YOUNG PEOPLE
-                        </h2>
-                        <h2 class="highlight-separator mb-0" data-shadow-animation="true" data-animation-delay="2000">
-                            TO BECOME LEADERS
-                        </h2>
-                    </div>
-                
-                    <!-- Description -->
-                    <div class="fs-20 sm-fs-18 text-dark-gray mb-20px w-70 xxl-w-100 lg-w-100 sm-w-90"
-                        data-anime='{ "el": "childs", "translateX": [110, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <p class="opacity-10">
-                            Importance Leadership empowers diverse youth to become ethical, inclusive, and purpose-driven leaders who drive sustainable global change. Join us in shaping a just, equitable, and transformative future.
-                        </p>
-                    </div>
-                
-                    <!-- Call to Action -->
-                    <div class="icon-with-text-style-08"
-                        data-anime='{ "el": "childs", "translateX": [140, 0], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        
-                        <a href="Resources/About Importance Leadership.pdf" class="btn btn-primary learn-more">
-                            Learn More
-                        </a>
-                    </div>
-                
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-5 bg-light">
+                    <h1 class="display-4 fw-bold mb-4">Empowering Young People to Become Leaders</h1>
+                    <p class="lead mb-4">
+                        Importance Leadership empowers diverse youth to become ethical, inclusive, and purpose-driven leaders who drive sustainable global change. Join us in shaping a just, equitable, and transformative future.
+                    </p>
+                    <a href="who-we-are.html" class="btn btn-primary btn-lg">Learn More</a>
                 </div>
                 
-    
                 <!-- Right Column -->
-                <div class="col-12 col-md-6 position-relative order-1 order-md-2">
-                    <div class="swiper h-100 banner-slider sm-h-450px swiper-light-pagination"
-                        data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-pagination-bullets", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "stopOnLastSlide": true, "disableOnInteraction": false },"keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }'>
-                       
-                        <div class="swiper-wrapper" style ="height:100hv; position: relative">
+                <div class="col-12 col-md-6">
+                    <div class="swiper banner-slider">
+                        <div class="swiper-wrapper">
                             <!-- Slide 1 -->
-                            <div class="swiper-slide" aria-label="Slide 1: Description of the first image">
-                                <div class="position-absolute left-0px top-0px w-100 h-100 cover-background"
-                                    style="border-radius: 12px;"  loading="lazy">
-                                </div>
-                                <div class="position-absolute bottom-20px left-20px text-white">
-                                <p class="em"> <em>
-                                            <iframe width="764" height="656" 
-                                                                    src="https://www.youtube.com/embed/-ds7EyJf6Ak?start=30&end=120" 
-                                                                    title="The Keys to Becoming a True Leader" 
-                                                                    frameborder="0" 
-                                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                                                    referrerpolicy="strict-origin-when-cross-origin" 
-                                                                    allowfullscreen>
-                                             </iframe>
-
-                                   </em></p>
-                                    
-                                </div>
+                            
+                            <div class="swiper-slide">
+                                <video controls style="width: 100%; height: auto;">
+                                    <source src="image/2583475-hd_1920_1080_24fps.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                
                             </div>
-                        
-                            </div>
-                           
+                          
                         </div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- end banner -->
-    <!-- start section -->
-    
-    
-    
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const counters = document.querySelectorAll(".vertical-counter");
-            counters.forEach(counter => {
-                const updateCounter = () => {
-                    const target = +counter.getAttribute("data-to");
-                    const current = +counter.innerText;
-                    const increment = Math.ceil(target / 200); // Adjust speed here
-    
-                    if (current < target) {
-                        counter.innerText = current + increment;
-                        setTimeout(updateCounter, 10);
-                    } else {
-                        counter.innerText = target; // Ensure it lands on target
-                    }
-                };
-                updateCounter();
-            });
-        });
-    </script>
-    
-    
-    
-   
-    
-    <!-- end footer -->
-    <!-- start scroll progress -->
-    <div class="scroll-progress d-none d-xxl-block">
-        <a href="#" class="scroll-top" aria-label="scroll">
-            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
-        </a>
-    </div>
-    <!-- end scroll progress -->
-    <!-- javascript libraries -->
-   
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/vendors.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="js/home.js"></script>
-    <!-- Custom JS -->
-    <script type="module" src="./customjs/fetchBlogs.js" defer></script>
-    <script>
-   
-</script>
+    <section>
+        <div class="container my-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h4 class="text-primary fw-bold">Our Transformative Programs</h4>
+                    <p class="text-muted mt-3 color-666 bg-light-gray">
+                        Our transformative programs are designed to shape the next generation of influential and visionary leaders. 
+                        Guided by our vision of an inclusive world where every youth is empowered and equipped to unlock their full potential, 
+                        <strong>Importance Leadership</strong> is committed to mobilizing, inspiring, and empowering young individuals to become impactful change-makers.
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
 
-<!-- Load Footer Script -->
-<script src="loadFooter.js"></script>
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 text-center g-4">
+                
+            <!-- Counter Item -->
+            <div class="col">
+                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                    <span class="alt-font fw-bold text-primary fs-5">Youth Empowered</span>
+                    <hr class="divider">
+                    <h2 class="fw-bold text-dark counter">2,500+</h2>
+                    <p class="text-secondary description">Opportunities for future leaders</p>
+                </div>
+            </div>
+
+            <!-- Counter Item -->
+            <div class="col">
+                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                    <span class="alt-font fw-bold text-primary fs-5">Mentors</span>
+                    <hr class="divider">
+                    <h2 class="fw-bold text-dark counter">20+</h2>
+                    <p class="text-secondary description">Guiding the next generation</p>
+                </div>
+            </div>
+
+            <!-- Counter Item -->
+            <div class="col">
+                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                    <span class="alt-font fw-bold text-primary fs-5">Leadership Workshops</span>
+                    <hr class="divider">
+                    <h2 class="fw-bold text-dark counter">13</h2>
+                    <p class="text-secondary description">Inspiring change through training</p>
+                </div>
+            </div>
+
+            <!-- Counter Item -->
+            <div class="col">
+                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
+                    <span class="alt-font fw-bold text-primary fs-5">Communities Impacted</span>
+                    <hr class="divider">
+                    <h2 class="fw-bold text-dark counter">14</h2>
+                    <p class="text-secondary description">Transforming lives worldwide</p>
+                </div>
+            </div>
+
+        </div>
+        
+       
+    </section>
+    
+
+  <script src="loadFooter.js"></script>
 </body>
 
 </html>
