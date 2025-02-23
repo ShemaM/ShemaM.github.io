@@ -1,616 +1,755 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <title>Team - Importance Leadership</title>
-        <link rel="icon" type="png" href="images/IL02 (1).jpg">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-        <meta name="icon" content="Importance Leadership">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="description" content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
-        <!-- favicon icon -->
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-        <!-- google fonts preconnect -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- style sheets and font icons -->
-        <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/finance/finance.css" />
-    </head>
-    <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="navy" class="custom-cursor"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Importance Leadership</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
 
+        .team-section {
+            padding: 80px 0;
+        }
 
-<!-- loading the header of the main page -->
+        .team-section .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
 
-        <div id="header-container"></div>
-        <script src="loadHeader.js"></script>
+        .team-section .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
 
-        <!-- start header -->
-       <!-- the header will be loaded from the main page -->
-        <!-- end header -->
-        <!-- start page title -->
-        <section class="page-title-parallax-background half-section ipad-top-space-margin" data-parallax-background-ratio="0.5" style="background-image: src('image/IL02 (1).png');">
-            <div class="opacity-extra-medium bg-gradient-dark-gray-brown"></div>
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 text-center position-relative page-title-extra-large">
-                        <div class="d-flex flex-column small-screen">
-                            <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                                <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-500 ls-minus-1px"> The Leaders</h1>
-                            </div>
-                            <!-- start breadcrumb -->
-                           
-                            <!-- end breadcrumb -->
+        .team-section .card-img-top {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+            margin: 20px auto 15px;
+        }
+
+        .team-section .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-section .card-text {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .team-section .social-icon a {
+            margin: 0 8px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .team-section .social-icon a:hover {
+            color: #007bff;
+        }
+
+        .team-section .read-more-btn {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .team-section .read-more-btn:hover {
+            text-decoration: underline;
+        }
+
+        .team-section .full-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .header-section {
+            background: linear-gradient(135deg, #007bff, #004085);
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .header-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .footer-section {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .divider {
+            border-top: 3px solid #123456;
+            width: 50%;
+            margin: 5px auto;
+}
+    </style>
+</head>
+<body>
+
+    <!-- loading the header of the main page -->
+
+    <div id="header-container"></div>
+    <script src="loadHeader.js"></script>
+
+<!-- Header Section -->
+<header class="header-section">
+    <div class="container">
+        
+        <h4 class="fw-bolder fs-50 color-666">Meet the leaders and departments driving change and innovation at Importance Leadership.</h4>
+    </div>
+</header>
+
+<!-- Team Members Section -->
+<section class="team-section">
+    <div class="container">
+        <div class="row g-4">
+            <!-- CEO -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center border-0 shadow-lg h-100">
+                    <!-- Clickable Profile Image -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#fistonModal">
+                        <img src="image/fiston.png" class="card-img-top rounded-circle mx-auto mt-4" alt="Fiston Ndayishimiye" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                    </a>
+            
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <!-- Name and Title -->
+                        <h4 class="card-title fw-bold mb-2">Fiston Ndayishimiye</h4>
+                        <p class="card-text text-muted mb-3">CEO & Founder</p>
+            
+                        <!-- Divider -->
+                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff; border: none;">
+            
+                        <!-- Description -->
+                        <div class="description mt-3">
+                            <p class="short-text">Fiston provides strategic leadership and drives the organization's mission.</p>
+                            <p class="full-text d-none">As the visionary founder, Fiston ensures financial sustainability, stakeholder engagement, and operational excellence across all departments. His leadership inspires innovation and growth.</p>
+                          
+                        </div>
+            
+                        <!-- Social Icons with Official Brand Colors -->
+                        <div class="social-icon mt-4">
+                            <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end page title -->
-        <!-- start section --> 
-        <!-- Section: About Fiston -->
-<section class="bg-very-light-gray pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
             
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/fiston.png" alt="Fiston Ndayishimiye" 
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+            <!-- Modal for Fiston Ndayishimiye -->
+            <div class="modal fade" id="fistonModal" tabindex="-1" aria-labelledby="fistonModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold" id="fistonModalLabel">Fiston Ndayishimiye</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Enlarged Image -->
+                                    <img src="image/fiston.png" class="img-fluid rounded" alt="Fiston Ndayishimiye">
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Detailed Description -->
+                                    <p class="lead">CEO & Founder</p>
+                                    <p>Fiston Ndayishimiye is the visionary founder of Importance Leadership. With a passion for empowering youth, he provides strategic leadership and drives the organization's mission to mobilize, inspire, and empower young individuals to become change-makers.</p>
+                                    <p>Under his leadership, Importance Leadership has achieved significant milestones, including financial sustainability, stakeholder engagement, and operational excellence across all departments. Fiston's dedication to innovation and growth continues to inspire the next generation of leaders.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
+            <!-- HR Department -->
+            <div class="col-md-4">
+                <div class="card text-center border-0 shadow-lg h-100">
+                    <!-- Clickable Profile Image -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#bonkeyModal">
+                        <img src="image/Bonkey.png" class="card-img-top rounded-circle mx-auto mt-4"
+                             alt="Bonkey Muhumure"
+                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                    </a>
+            
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Bonkey Muhumure</h4>
+                        <p class="card-text text-muted">HR Manager</p>
+                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+            
+                        <!-- Short Description -->
+                        <div class="description mt-3">
+                            <p>Bonkey oversees recruitment, training, and employee relations, ensuring a positive workplace culture.</p>
+                        </div>
+            
+                        <!-- Social Icons with Official Brand Colors -->
+                        <div class="social-icon mt-4">
+                            <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for Bonkey Muhumure -->
+            <div class="modal fade" id="bonkeyModal" tabindex="-1" aria-labelledby="bonkeyModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold" id="bonkeyModalLabel">Bonkey Muhumure</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Enlarged Image -->
+                                    <img src="image/Bonkey.png" class="img-fluid rounded" alt="Bonkey Muhumure">
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Detailed Description -->
+                                    <p class="lead">HR Manager</p>
+                                    <p>Bonkey ensures compliance with labor laws, handles payroll, and fosters a supportive environment for all employees.</p>
+                                    <p>As a key figure in the organization, Bonkey oversees recruitment, training, and employee relations to maintain a positive workplace culture.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        
+
+            <!-- Finance Department -->
+            <div class="col-md-4">
+                <div class="card text-center border-0 shadow-lg h-100">
+                    <!-- Clickable Profile Image -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#fabiolaModal">
+                        <img src="image/fabiola.png" class="card-img-top rounded-circle mx-auto mt-4"
+                             alt="Fabiola Baraka"
+                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #28a745; cursor: pointer;">
+                    </a>
+            
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Fabiola Baraka</h4>
+                        <p class="card-text text-muted">Finance Manager</p>
+                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #123456;">
+            
+                        <!-- Short Description -->
+                        <div class="description mt-3">
+                            <p>Fabiola manages budgets, financial planning, and ensures proper allocation of resources.</p>
+                        </div>
+            
+                        <!-- Social Icons with Official Brand Colors -->
+                        <div class="social-icon mt-4">
+                            <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for Fabiola Baraka -->
+            <div class="modal fade" id="fabiolaModal" tabindex="-1" aria-labelledby="fabiolaModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold" id="fabiolaModalLabel">Fabiola Baraka</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Enlarged Image -->
+                                    <img src="image/fabiola.png" class="img-fluid rounded" alt="Fabiola Baraka">
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Detailed Description -->
+                                    <p class="lead">Finance Manager</p>
+                                    <p>With a strong background in finance, Fabiola oversees financial statements, audits, and tax compliance, ensuring the organization's financial health.</p>
+                                    <p>She also manages budgets, financial planning, and ensures proper allocation of resources to support the organization’s strategic goals.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Secretariat -->
+            <div class="col-md-4">
+                <div class="card text-center border-0 shadow-lg h-100">
+                    <!-- Clickable Profile Image -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#uwaseModal">
+                        <img src="image/uwase.png" class="card-img-top rounded-circle mx-auto mt-4"
+                             alt="Uwase Joyeuse"
+                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #28a745; cursor: pointer;">
+                    </a>
+            
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Uwase Joyeuse</h4>
+                        <p class="card-text text-muted">Secretariat</p>
+                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #28a745;">
+            
+                        <!-- Short Description -->
+                        <div class="description mt-3">
+                            <p>Uwase is responsible for handling official documentation, correspondence, and meeting coordination.</p>
+                        </div>
+            
+                        <!-- Social Icons with Official Brand Colors -->
+                        <div class="social-icon mt-4">
+                            <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for Uwase Joyeuse -->
+            <div class="modal fade" id="uwaseModal" tabindex="-1" aria-labelledby="uwaseModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold" id="uwaseModalLabel">Uwase Joyeuse</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Enlarged Image -->
+                                    <img src="image/uwase.png" class="img-fluid rounded" alt="Uwase Joyeuse">
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Detailed Description -->
+                                    <p class="lead">Secretariat</p>
+                                    <p>Uwase is responsible for handling official documentation, correspondence, and ensuring seamless communication within the organization.</p>
+                                    <p>She plays a crucial role in scheduling meetings, preparing reports, and maintaining organized records for smooth administrative operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <!-- Marketing Department -->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Profile Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#mickModal">
+                            <img src="image/fabiol.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Mick"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
                 
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                    FISTON NDAYISHIMIYE
-                </span>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Mick</h4>
+                            <p class="card-text text-muted">Marketing</p>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Mick develops and implements strategic marketing campaigns to enhance brand visibility and outreach.</p>
+                            </div>
+                
+                             <!-- Social Icons with Official Brand Colors -->
+                             <div class="social-icon mt-4">
+                                <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Mick -->
+                <div class="modal fade" id="mickModal" tabindex="-1" aria-labelledby="mickModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="mickModalLabel">Mick</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/fabiola.png" class="img-fluid rounded" alt="Mick">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Marketing</p>
+                                        <p>Mick is responsible for developing marketing strategies that enhance the organization's public image and outreach efforts.</p>
+                                        <p>With expertise in digital marketing and brand communication, Mick ensures that promotional campaigns align with the organization's mission and engage the right audience effectively.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
 
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Our CEO
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
 
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Fiston Ndayishimiye, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
+                <!-- Media Department -->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Profile Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#abdallahModal">
+                            <img src="image/fabiola.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Abdallah"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Abdallah</h4>
+                            <p class="card-text text-muted">Media Department</p>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Abdallah leads media strategy, ensuring effective storytelling and brand communication.</p>
+                            </div>
+                 <!-- Social Icons with Official Brand Colors -->
+                 <div class="social-icon mt-4">
+                    <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                        <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                        <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                        <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                    </a>
+                </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Abdallah -->
+                <div class="modal fade" id="abdallahModal" tabindex="-1" aria-labelledby="abdallahModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="abdallahModalLabel">Abdallah</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/fabiola.png" class="img-fluid rounded" alt="Abdallah">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Media Department</p>
+                                        <p>Abdallah is responsible for creating and managing digital content, ensuring the organization's stories reach the right audience.</p>
+                                        <p>With expertise in media production and social media management, he enhances visibility through high-quality visuals and strategic campaigns.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
 
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                    </button>
+                <!-- IT Department -->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Profile Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#shemaModal">
+                            <img src="image/shema.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Shema Manasseh"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Shema Manasseh</h4>
+                            <p class="card-text text-muted">IT Department</p>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Shema ensures that all IT systems, software, and hardware are up-to-date and optimized for efficiency.</p>
+                            </div>
+                
+                            <!-- Social Icons with Official Brand Colors -->
+                            <div class="social-icon mt-4">
+                                <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Shema -->
+                <div class="modal fade" id="shemaModal" tabindex="-1" aria-labelledby="shemaModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="shemaModalLabel">Shema Manasseh</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/shema.png" class="img-fluid rounded" alt="Shema Manasseh">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">IT Department</p>
+                                        <p>Shema Manasseh leads the organization's IT infrastructure, ensuring seamless operations of all technical systems.</p>
+                                        <p>With a background in software engineering, he develops, manages, and optimizes applications while keeping the organization at the forefront of technological advancements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Fiston</span> Ndayishimiye
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="bg-light-gray pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
-            
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/Bonkey.png" alt="Bonk" 
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            </div>
+                <!--Liz-->
 
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
+
+                <!-- IT Department -->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Profile Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#shemaModal">
+                            <img src="image/shema.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Shema Manasseh"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
                 
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                    BONKEY MUHUMURE
-                </span>
-
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Regional Director
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
-
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Bonk, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
-
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                    </button>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Pacific Muhumure</h4>
+                            <p class="card-text text-muted">IT Department</p>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Pacific ensures that all IT systems, software, and hardware are up-to-date and optimized for efficiency.</p>
+                            </div>
+                
+                            <!-- Social Icons with Official Brand Colors -->
+                            <div class="social-icon mt-4">
+                                <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Bonkey</span>Muhumure 
-                    <hr>
-                    <div class="social-icon mt-3">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bg-very-light-navy pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
-            
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/shema.png" alt="Shema Manasseh" 
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            </div>
-
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
                 
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                    sHEMA NZABAKAMIRA MANASSEH
-                </span>
-
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Software Engineer
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
-
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Shema Manasaseh, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
-
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                    </button>
+                <!-- Modal for Shema -->
+                <div class="modal fade" id="shemaModal" tabindex="-1" aria-labelledby="shemaModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="shemaModalLabel">Pacific Muhumure</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/shema.png" class="img-fluid rounded" alt="Shema Manasseh">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">IT Department</p>
+                                        <p> Pacific leads the organization's IT infrastructure, ensuring seamless operations of all technical systems.</p>
+                                        <p>With a background in software engineering, he develops, manages, and optimizes applications while keeping the organization at the forefront of technological advancements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Shema</span> Manasseh
-                    <hr>
-                    <div class="social-icon mt-3">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
+                <!-- IT Department -->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Profile Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#shemaModal">
+                            <img src="image/shema.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Shema Manasseh"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
                         </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bg-very-light-black pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
-            
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/pacific.png" alt="Pacific" 
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            </div>
-
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
                 
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                    Muhumure Pacific
-                </span>
-
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Parnerships
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
-
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Pacific Muhumure, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
-
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                    </button>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Liz</h4>
+                            <p class="card-text text-muted">Research Department</p>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Lizz ensures that all IT systems, software, and hardware are up-to-date and optimized for efficiency.</p>
+                            </div>
+                
+                            <!-- Social Icons with Official Brand Colors -->
+                            <div class="social-icon mt-4">
+                                <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-facebook-f fa-lg" style="color: #1877F2;"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-instagram fa-lg" style="color: #E1306C;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" class="mx-2">
+                                    <i class="fab fa-linkedin fa-lg" style="color: #0077B5;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Pacific</span> Muhumure
-                    <hr>
-                    <div class="social-icon mt-3">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
+                
+                <!-- Modal for Shema -->
+                <div class="modal fade" id="shemaModal" tabindex="-1" aria-labelledby="shemaModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="shemaModalLabel">Liz</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/shema.png" class="img-fluid rounded" alt="Shema Manasseh">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Research Department</p>
+                                        <p>Liz leads the organization's IT infrastructure, ensuring seamless operations of all technical systems.</p>
+                                        <p>With a background in software engineering, he develops, manages, and optimizes applications while keeping the organization at the forefront of technological advancements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
-                    
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bg-gray pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
-            
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/fabiola.png" alt="Fabiola" 
-                
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                
-                    </div>
-
-
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                   Fabiola Baraka
-
-                </span>
-
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Finance
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
-
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Fabiola Baraka, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
-
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                       
-                    </button>
                 </div>
-
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Fabiola</span> Baraka 
-                    <hr>
-                    <div class="social-icon mt-3">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    
-                </span>
             </div>
         </div>
-    </div>
+    
+        
 </section>
 
-<section class="bg-light-gray pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
-            
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/Grace.png" alt="Grace" 
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            </div>
-
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                    Ingabire Grace
-                </span>
-
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Research and Development
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
-
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Ingabire Grace, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
-
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                    </button>
-                </div>
-
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Ingabire</span> Grace
-                    <hr>
-                    <div class="social-icon mt-3">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bg-gray pb-0">
-    <div class="container">
-        <div class="row align-items-lg-end align-items-center flex-column-reverse flex-lg-row text-center text-lg-start overflow-hidden">
-            
-            <!-- Image Column -->
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
-                <img class="w-100" src="image/uwase.png" alt="Uwase" 
-                     data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-            </div>
-
-            <!-- Content Column -->
-            <div class="col-xl-5 offset-xl-1 col-lg-6 pb-8" 
-                 data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-                
-                <!-- Subtitle -->
-                <span class="fs-17 d-inline-block fw-500 text-uppercase text-base-color ls-1px mb-15px">
-                    Uwase Joyeuse
-                </span>
-
-                <!-- Title -->
-                <h1 class="alt-font fw-600 text-dark-gray ls-minus-2px shadow-none" 
-                    data-shadow-animation="true" 
-                    data-animation-delay="900">
-                    <span class="text-highlight">
-                        Secretary
-                        <span class="bg-base-color h-10px sm-h-8px bottom-20px md-bottom-17px opacity-5 separator-animation"></span>
-                    </span>
-                </h1>
-
-                <!-- Description (Truncated) -->
-                <div class="w-90 xs-w-100 mx-auto mx-lg-0">
-                    <p id="short-text">
-                        Uwase Joyeuse, the founder of Importance Leadership, is on a mission to transform the lives of young people into leaders and empower them to become agents of change. Born in the Democratic Republic of Congo, Fiston's journey exemplifies the resilience and determination of his people, the Banyamulenge, who have long been viewed with suspicion despite their deep roots in Congolese society.
-                    </p>
-                    <p id="full-text" style="display: none;">
-                        As Fiston reflects on his path, he is reminded of the words of the great Patrice Lumumba, the first democratically elected Prime Minister of the Congo, who once declared, "We are no longer your monkeys." Lumumba's unwavering commitment to the independence and unity of the Congo, despite the efforts of Western powers to undermine him, continues to inspire Fiston in his struggle for self-determination.
-
-                        Echoing Martin Luther King Jr.'s sentiments, Fiston believes that "Darkness cannot drive out darkness; only light can do that." Through his work with Importance Leadership, he seeks to be that light, guiding the youth toward a brighter future.
-
-                        "There are millions of untapped people who are waiting to hear my voice and receive words of knowledge, empowerment, encouragement, inspiration, and motivation," Fiston declares, channeling the spirit of Muhammad Ali, who famously said, "Float like a butterfly, sting like a bee. The hands can't hit what the eyes can't see."
-
-                        Fiston's journey has not been without its challenges. Like Malcolm X, who once stated, "The only way we'll get freedom for ourselves is to identify ourselves with every oppressed person in the world," Fiston has had to navigate the complexities of his identity as an American African, deeply connected to his African roots, but also shaped by the realities of life in the United States.
-
-                        "I am American on papers but African in heart and blood," Fiston explains, a sentiment that resonates with the experiences of countless other immigrants and first-generation Americans who strive to bridge the divide between their ancestral heritage and their adopted home.
-
-                        Through his work, Fiston aims to empower the next generation of leaders, echoing the words of Lumumba, who declared, "The Congo's independence is a decisive step towards the liberation of the entire African continent." By inspiring young people to become "agents of change," Fiston hopes to ignite a spark that will illuminate the path toward a more just and equitable future for all.
-                    </p>
-                    <!-- Read Full Button -->
-                    <button id="read-more-btn" class="btn btn-link text-base-color p-0 fw-500" onclick="toggleText()">
-                        Read More
-                    </button>
-                </div>
-
-                <!-- Author Signature -->
-                <span class="fs-22 text-dark-gray d-block">
-                    @ <span class="fw-600">Uwase</span> Joyeuse
-                    <hr>
-                    <div class="social-icon mt-3">
-                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                    
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- JavaScript for Toggle Functionality -->
-<script>
-    function toggleText() {
-        const shortText = document.getElementById('short-text');
-        const fullText = document.getElementById('full-text');
-        const readMoreBtn = document.getElementById('read-more-btn');
-
-        if (fullText.style.display === 'none') {
-            fullText.style.display = 'block';
-            shortText.style.display = 'none';
-            readMoreBtn.textContent = 'Read Less';
-        } else {
-            fullText.style.display = 'none';
-            shortText.style.display = 'block';
-            readMoreBtn.textContent = 'Read Full';
-        }
-    }
-</script>
-  
-
-<!-- JavaScript for Read More Toggle -->
-<script>
-    function toggleReadMore(button) {
-        const container = button.closest('.team-content');
-        const shortText = container.querySelector('p:not([style*="display: none"])');
-        const fullText = container.querySelector('p[style*="display: none"]');
-
-        if (fullText.style.display === 'none') {
-            fullText.style.display = 'block';
-            shortText.style.display = 'none';
-            button.textContent = 'Read Less';
-        } else {
-            fullText.style.display = 'none';
-            shortText.style.display = 'block';
-            button.textContent = 'Read More';
-        }
-    }
-</script>
-
-<!-- Load Footer Script -->
 <script src="loadFooter.js"></script>
-    </body>
+
+
+<!-- Bootstrap JavaScript (Include Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
 </html>

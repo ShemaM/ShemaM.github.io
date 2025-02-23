@@ -26,17 +26,25 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    
+    <style>
+        /* Custom CSS for grayed-out links */
+        .disabled-link {
+            opacity: 0.5;
+            pointer-events: none; /* Prevents clicking */
+            text-decoration: none; /* Removes underline */
+            color: #6c757d !important; /* Gray color */
+        }
+    </style>
 </head>
 
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b" class="custom-cursor">
     <!-- start page loader -->
-     <div id="preloader"></div>
+    <div id="preloader"></div>
     <!-- end page loader -->
     <header>
         <!-- Navigation -->
@@ -55,7 +63,7 @@
         
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto" id="navbarLinks">
         
                         <!-- Who We Are Dropdown -->
                         <li class="nav-item dropdown">
@@ -83,11 +91,10 @@
                         </li>
         
                         <!-- Impact Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="impact.html" id="impactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item">
+                            <a class="nav-link" href="impact.html" id="impactLink">
                                 Impact
                             </a>
-                         
                         </li>
         
                         <!-- Donate Dropdown -->
@@ -100,17 +107,7 @@
                                 <li><a class="dropdown-item" style="color:navy" href="#donors">Donors</a></li>
                             </ul>
                         </li>
-                        
-                    
         
-                        <!-- Search Bar
-                        <li class="nav-item ms-lg-1">
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-primary" type="submit">Search</button>
-                            </form>
-                        </li>
-         -->
                         <!-- Call-to-Action Button -->
                         <li class="nav-item ms-lg-3">
                             <a class="btn btn-primary" href="#donate" role="button">Donate Now</a>
@@ -119,7 +116,29 @@
                 </div>
             </div>
         </nav>
-        
     </header>
+
+    <!-- JavaScript to Gray Out Links -->
+    <script>
+        // Function to gray out other links when one is clicked
+        function grayOutOtherLinks(clickedLink) {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('#navbarLinks .nav-link');
+
+            // Loop through all links
+            navLinks.forEach(link => {
+                if (link !== clickedLink) {
+                    link.classList.add('disabled-link'); // Add the disabled class
+                }
+            });
+        }
+
+        // Add event listeners to all navigation links
+        document.querySelectorAll('#navbarLinks .nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                grayOutOtherLinks(this); // Call the function to gray out other links
+            });
+        });
+    </script>
 </body>
 </html>

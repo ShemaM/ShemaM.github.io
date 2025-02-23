@@ -58,7 +58,6 @@ section {
 
 .text-gradient-emerald-blue-emerald-green {
     background: linear-gradient(90deg, #00b894, #0984e3);
-    -webkit-background-clip: text;
     color: transparent;
 }
 
