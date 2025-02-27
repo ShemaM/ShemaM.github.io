@@ -2,158 +2,204 @@
 <html lang="en">
 
 <head>
+    <title>Importance Leadership - Empowering Future Leaders</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Importance Leadership</title>
-    <meta name="description"
-        content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
-    
+    <meta name="description" content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
+    <meta name="keywords" content="Leadership, Impact, Community, Mentorship, Youth Empowerment">
+    <meta name="author" content="Importance Leadership">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Importance Leadership - Empowering Future Leaders">
+    <meta property="og:description" content="Empowering communities through leadership, innovation, and impact.">
+    <meta property="og:image" content="https://yourwebsite.com/image/IL02.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="image/IL02.png">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-  
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Custom Styles -->
     <style>
-        /* Custom Styles */
+        :root {
+            --primary-color: #123456;
+            --secondary-color: #ffffff;
+            --accent-color: #ff6f61;
+            --font-family: 'Roboto', sans-serif;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.8;
+            font-family: var(--font-family);
+            color: var(--primary-color);
+        }
+
+        .logo-image {
+            height: 17vh;
+            width: auto;
+            object-fit: contain;
+            border-radius: 115px;
+            padding: 5px;
+            background-color: var(--secondary-color);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         .navbar {
-            background-color: #fff !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--primary-color) !important;
+            padding: 20px;
+            font-size: 18px;
         }
 
-        .navbar-brand img {
-            max-height: 60px;
-            width: auto;
-            object-fit: contain;
+        .navbar-nav .nav-link {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--secondary-color) !important;
+            transition: color 0.3s ease-in-out;
         }
 
-        .nav-link {
-            font-weight: 500;
-            color: #2c3e50 !important;
-        }
-
-        .nav-link:hover {
-            color: #007bff !important;
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
         }
 
         .dropdown-menu {
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: var(--primary-color);
         }
 
-        .btn-primary {
-            border: none;
-            padding: 10px 25px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
+        .dropdown-menu .dropdown-item {
+            color: var(--secondary-color) !important;
         }
 
-        .banner-section {
+        .dropdown-menu .dropdown-item:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color) !important;
+        }
+
+        .hero-section {
+            position: relative;
+            color: var(--secondary-color);
+            text-align: center;
             padding: 100px 0;
+            background: url('image/homepage-bg.jpg') center/cover no-repeat;
+            overflow: hidden;
+            font-weight: bold;
+            font-size: larger;
         }
 
-        .banner-section h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        .banner-section p {
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        .swiper {
-            height: 100%;
-        }
-
-        .swiper-slide iframe {
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 12px;
+            background: inherit;
+            filter: blur(8px);
+            z-index: 1;
         }
 
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+            height: 70lvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section .btn {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hero-section .btn-outline-light:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+
+            .hero-section .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+        .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Places video behind content */
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the section */
+}
     </style>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
-            <div class="container-fluid">
-                <!-- Logo -->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+            <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="image/IL02 (1).png" alt="Importance Leadership Logo" class="logo-image">
+                    <img src="image/IL02.png" alt="Importance Leadership Logo" class="logo-image" loading="lazy">
                 </a>
-                
-                <!-- Hamburger Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <!-- Who We Are Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Who We Are
-                            </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown">
-                                <li><a class="dropdown-item" href="who-we-are.html#about">About</a></li>
-                                <li><a class="dropdown-item" href="who-we-are.html#mission">Mission</a></li>
-                                <li><a class="dropdown-item" href="who-we-are.html#vision">Vision</a></li>
-                                <li><a class="dropdown-item" href="team.html">Team</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         
-                        <!-- What We Do Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                What We Do
-                            </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whatWeDoDropdown">
-                                <li><a class="dropdown-item" href="404.html">Services</a></li>
-                                <li><a class="dropdown-item" href="">USA</a></li>
-                                <li><a class="dropdown-item" href="kenya">Kenya</a></li>
-                                <li><a class="dropdown-item" href="canada">Canada</a></li>
-                            </ul>
-                        </li>
-                        
-                        <!-- Impact Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="impact.html">Impact</a>
-                        </li>
-                        
-                        <!-- Donate Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Donate
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="donateDropdown">
-                                <li><a class="dropdown-item" href="makeGift">Make a Gift</a></li>
-                                <li><a class="dropdown-item" href="donors">Donors</a></li>
-                            </ul>
-                        </li>
-                        
-                        <!-- Call-to-Action Button -->
+                        <li class="nav-item"><a class="nav-link" href="who-we-are.html">Who We Are</a></li>
+                        <li class="nav-item"><a class="nav-link" href="what-we-do.html">What We Do</a></li>
+                        <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-primary" href="#donate">Donate Now</a>
+                            <a class="btn btn-primary" href="donate.html">Donate Now</a>
                         </li>
                     </ul>
                 </div>
@@ -161,103 +207,145 @@
         </nav>
     </header>
 
-    <!-- Banner Section -->
-    <section class="banner-section">
-        <div class="container-fluid h-100">
-            <div class="row h-100 g-0">
-                <!-- Left Column -->
-                <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-5 bg-light">
-                    <h1 class="display-4 fw-bold mb-4">Empowering Young People to Become Leaders</h1>
-                    <p class="lead mb-4">
-                        Importance Leadership empowers diverse youth to become ethical, inclusive, and purpose-driven leaders who drive sustainable global change. Join us in shaping a just, equitable, and transformative future.
-                    </p>
-                    <a href="who-we-are.html" class="btn btn-primary btn-lg">Learn More</a>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Empowering Young People To Become Leaders</h1>
+            <p>Join us in fostering change and creating a better future.</p>
+            <div>
+                <a href="who-we-are.html" class="btn btn-primary btn-lg">Get Started</a>
+                <a href="what-we-do.html" class="btn btn-primary btn-lg">Discover</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-image: url('image/bg-impact.jpg'); background-size: cover; background-position: center;">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="text-uppercase fw-bold text-blue fw-bolder fs-25">OUR PROGRAMS</span>
+                    <h2 class="fw-bold mt-3 text-black">Empowering the Next Generation of Leaders</h2>
+                    <p class="fs-17 mt-3 text-black fw-bolder">Discover how our programs are transforming lives and creating lasting impact in communities worldwide.</p>
                 </div>
-                
-                <!-- Right Column -->
-                <div class="col-8 col-md-6">
-                    <div class="swiper banner-slider">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            
-                            <div class="col-12 col-md-6">
-                                <iframe width="864" height="902" src="https://www.youtube.com/embed/-ds7EyJf6Ak" title="The Keys to Becoming a True Leader // Motivational Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                
-                            </div>
-                          
+            </div>
+    
+            <!-- Programs Grid -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Program 1: Leadership Development -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="image/pexels-divinetechygirl-1181274.jpg" class="card-img-top" alt="Leadership Development Program">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Leadership Development</h5>
+                            <p class="card-text">Empowering young leaders with the skills and confidence to drive change in their communities.</p>
+                            <a href="leadership-development.html" class="btn btn-primary">Learn More</a>
                         </div>
-                        <!-- Pagination -->
-                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+    
+                <!-- Program 2: Mentorship -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="image/pexels-innoh-khumbuza-736696-2877180.jpg" class="card-img-top" alt="Mentorship Program">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Mentorship Program</h5>
+                            <p class="card-text">Connecting young individuals with experienced mentors to guide their personal and professional growth.</p>
+                            <a href="mentorship-program.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Program 3: Community Impact -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="image/pexels-rdne-7414284.jpg" class="card-img-top" alt="Community Impact Program">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Community Impact</h5>
+                            <p class="card-text">Driving meaningful change through community-driven projects and initiatives.</p>
+                            <a href="community-engagement.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold"></h5>
+                <p class="card-text"></p>
+                <a href="what-we-do.html" class="btn btn-primary btn-large fw-bold">Explore All Programs</a>
+            </div>
+
+        </div>
+                       
+    </section>
+
+    <!--impact-->
+
+    <section class="py-5" >
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Column: Impact Description -->
+                <div class="col-lg-6 mb-5 mb-lg-0 bg-extra-medium-gray">
+                    <h2 class="fw-bold text-dark-gray mb-4">Our Impact in Numbers</h2>
+                    <p class="fs-5 text-dark-gray">We are proud of the measurable impact we’ve made in empowering communities and fostering leadership. Here’s a snapshot of our achievements:</p>
+                </div>
+    
+          
+                <!-- Right Column: Impact Figures -->
+                <div class="col-lg-6">
+                    <!-- Impact Figure 1: Youth Empowered -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Youth Empowered</span>
+                            <span class="fw-bold">10,000+</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient-emerald-blue-emerald-green" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+    
+                    <!-- Impact Figure 2: Communities Reached -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Communities Reached</span>
+                            <span class="fw-bold">500+</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient-emerald-blue-emerald-green" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+    
+                    <!-- Impact Figure 3: Programs Delivered -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Programs Delivered</span>
+                            <span class="fw-bold">200+</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient-emerald-blue-emerald-green" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+    
+                    <!-- Impact Figure 4: Partnerships Formed -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Partnerships Formed</span>
+                            <span class="fw-bold">50+</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-gradient-emerald-blue-emerald-green" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section>
-        <div class="container my-4">
-            <div class="card shadow-sm border-0">
-                <div class="card-body p-4">
-                    <h4 class="text-primary fw-bold">Our Transformative Programs</h4>
-                    <p class="text-muted mt-3 color-666 bg-light-gray">
-                        Our transformative programs are designed to shape the next generation of influential and visionary leaders. 
-                        Guided by our vision of an inclusive world where every youth is empowered and equipped to unlock their full potential, 
-                        <strong>Importance Leadership</strong> is committed to mobilizing, inspiring, and empowering young individuals to become impactful change-makers.
-                    </p>
-                   
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 text-center g-4">
-                
-            <!-- Counter Item -->
-            <div class="col">
-                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
-                    <span class="alt-font fw-bold text-primary fs-5">Youth Empowered</span>
-                    <hr class="divider">
-                    <h2 class="fw-bold text-dark counter">2,500+</h2>
-                    <p class="text-secondary description">Opportunities for future leaders</p>
-                </div>
-            </div>
-
-            <!-- Counter Item -->
-            <div class="col">
-                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
-                    <span class="alt-font fw-bold text-primary fs-5">Mentors</span>
-                    <hr class="divider">
-                    <h2 class="fw-bold text-dark counter">20+</h2>
-                    <p class="text-secondary description">Guiding the next generation</p>
-                </div>
-            </div>
-
-            <!-- Counter Item -->
-            <div class="col">
-                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
-                    <span class="alt-font fw-bold text-primary fs-5">Leadership Workshops</span>
-                    <hr class="divider">
-                    <h2 class="fw-bold text-dark counter">13</h2>
-                    <p class="text-secondary description">Inspiring change through training</p>
-                </div>
-            </div>
-
-            <!-- Counter Item -->
-            <div class="col">
-                <div class="impact-card p-4 shadow rounded-3 bg-white d-flex flex-column align-items-center">
-                    <span class="alt-font fw-bold text-primary fs-5">Communities Impacted</span>
-                    <hr class="divider">
-                    <h2 class="fw-bold text-dark counter">14</h2>
-                    <p class="text-secondary description">Transforming lives worldwide</p>
-                </div>
-            </div>
-
-        </div>
-        
-       
-    </section>
-    
-
-  <script src="loadFooter.js"></script>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="loadFooter.js"></script>
 </body>
 
 </html>

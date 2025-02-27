@@ -1,53 +1,92 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title> Importance Leadership</title>
-    <link rel="icon" type="png" href="images/IL02 (1).jpg">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="icon" content="Importance Leadership">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="description"
-        content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
-    <!-- favicon icon -->
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <title>Importance Leadership</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empowering communities through leadership, innovation, and impact. Importance Leadership fosters change by providing mentorship, resources, and opportunities for young individuals to thrive and create a better future.">
+    <meta name="keywords" content="Leadership, Impact, Community, Mentorship, Youth Empowerment">
+    <meta name="author" content="Importance Leadership">
     
-    <!-- google fonts preconnect -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image/IL02 (1).png">
+    
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- style sheets and font icons  -->
-    <link rel="stylesheet" href="css/icon.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
 
     <style>
-        /* Custom CSS for grayed-out links */
-        .disabled-link {
-            opacity: 0.5;
-            pointer-events: none; /* Prevents clicking */
-            text-decoration: none; /* Removes underline */
-            color: #6c757d !important; /* Gray color */
-        }
-        .logo-image {
-    max-height: 60px; /* Adjust height */
-    width: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensures the whole image is visible */
+        /* Custom Styles */
+.logo-image {
+    height: 10lvh;
+    width: 100%;
+    object-fit: contain;
 }
-.logo {
+
+.disabled-link {
+    opacity: 0.5;
+    pointer-events: none;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar {
+    transition: all 0.3s ease-in-out;
+    background-color: #123456 !important; /* Set background color */
+    padding: 30px; /* More vertical spacing */
+    font-size: 18px; /* Increase font size for readability */
+    height: 20lvh;
+}
+
+/* Increase logo size */
+.logo-image {
+    width: auto; /* Maintain aspect ratio */
+    background-color: beige;
+    height: 18lvh;
+    margin-left: 0;
+    border-radius: 95%;
+    z-index: 1;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border: 2px solid #123456; /* White border for contrast */
     display: flex;
     align-items: center;
-    padding: 5px 10px; /* Adjust spacing */
+    justify-content: center;
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Hover effect */
+.logo-image:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 6px 15px #123456;
+}
+
+
+.navbar-nav .nav-link {
+    font-size: 28px; /* Make links more visible */
+    font-weight: bold; /* Emphasize menu items */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 15px; /* Add spacing */
+    color: #fff !important; /* Ensure links are visible */
+}
+
+/* Make dropdowns more readable */
+.dropdown-menu {
+    font-size: 25px;
+    padding: 10px;
+    background-color: #123456; /* Match navbar background */
+    border: none;
+}
+
+/* Ensure dropdown links are visible */
+.dropdown-menu .dropdown-item {
+    color: #ffff !important;
 }
 
 
@@ -55,67 +94,67 @@
 </head>
 
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b" class="custom-cursor">
-    <!-- start page loader -->
+    <!-- Page Loader -->
     <div id="preloader"></div>
-    <!-- end page loader -->
+
+    <!-- Header -->
     <header>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="index.html" aria-label="Home">
-                    <img src="image/IL02 (1).png" alt="Logo" class="logo-image">
+                    <img src="image/IL02 (1).png" alt="Importance Leadership Logo" class="logo-image">
                 </a>
-        
+
                 <!-- Hamburger Menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto" id="navbarLinks">
-        
-                        <!-- Who We Are Dropdown -->
+                        <!-- Who We Are -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Who We Are
                             </a>
-                            <ul class="dropdown-menu shadow-sm" aria-labelledby="whoWeAreDropdown" style="color:navy;">
-                                <li><a class="dropdown-item" style="color:navy" href="who-we-are.html#about">About</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="who-we-are.html#mission">Mission</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="who-we-are.html#vision">Vision</a></li>
-                                <li><a class="dropdown-item"style="color:navy" href="team.html">Team</a></li>
+                            <ul class="dropdown-menu shadow-sm">
+                                <li><a class="dropdown-item" href="who-we-are.html#about">About</a></li>
+                                <li><a class="dropdown-item" href="who-we-are.html#mission">Mission</a></li>
+                                <li><a class="dropdown-item" href="who-we-are.html#vision">Vision</a></li>
+                                <li><a class="dropdown-item" href="team.html">Team</a></li>
                             </ul>
                         </li>
-        
-                        <!-- What We Do Dropdown -->
+
+                        <!-- What We Do -->
                         <li class="nav-item">
-                            <a class="nav-link" href="what-we-do.html" id="whatWeDoDropdown">
+                            <a class="nav-link" href="what-we-do.html">
                                 What We Do
                             </a>
-                           
                         </li>
-        
-                        <!-- Impact Dropdown -->
+
+                        <!-- Impact -->
                         <li class="nav-item">
-                            <a class="nav-link" href="impact.html" id="impactLink">
+                            <a class="nav-link" href="impact.html">
                                 Impact
                             </a>
                         </li>
-        
-                        <!-- Donate Dropdown -->
+
+                        <!-- Donate -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button">
+                            <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Donate
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="donateDropdown" >
-                                <li><a class="dropdown-item" style="color:navy" href="404.html">Make a Gift</a></li>
-                                <li><a class="dropdown-item" style="color:navy" href="404.html">Donors</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="404.html">Make a Gift</a></li>
+                                <li><a class="dropdown-item" href="404.html">Donors</a></li>
                             </ul>
                         </li>
-        
+
                         <!-- Call-to-Action Button -->
                         <li class="nav-item ms-lg-3">
                             <a class="btn btn-primary" href="404.html" role="button">Donate Now</a>
@@ -126,27 +165,29 @@
         </nav>
     </header>
 
-    <!-- JavaScript to Gray Out Links -->
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript for Graying Out Links -->
     <script>
-        // Function to gray out other links when one is clicked
-        function grayOutOtherLinks(clickedLink) {
-            // Get all navigation links
+        document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('#navbarLinks .nav-link');
 
-            // Loop through all links
             navLinks.forEach(link => {
-                if (link !== clickedLink) {
-                    link.classList.add('disabled-link'); // Add the disabled class
-                }
-            });
-        }
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => l.classList.remove('disabled-link')); // Reset all links
+                    this.classList.add('disabled-link'); // Disable clicked link
+                });
 
-        // Add event listeners to all navigation links
-        document.querySelectorAll('#navbarLinks .nav-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-                grayOutOtherLinks(this); // Call the function to gray out other links
+                // Highlight active page
+                if (window.location.href.includes(link.getAttribute("href"))) {
+                    link.classList.add("active");
+                }
             });
         });
     </script>
 </body>
+
 </html>
