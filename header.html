@@ -12,94 +12,100 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="image/IL02 (1).png">
     
-    <!-- Google Fonts Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 
     <style>
         /* Custom Styles */
-.logo-image {
-    height: 10lvh;
-    width: 100%;
-    object-fit: contain;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
 
-.disabled-link {
-    opacity: 0.5;
-    pointer-events: none;
-    text-decoration: none;
-    color: #000;
-}
+        /* Navbar Styling */
+        .navbar {
+            background-color: #123456 !important;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.navbar {
-    transition: all 0.3s ease-in-out;
-    background-color: #123456 !important; /* Set background color */
-    padding: 30px; /* More vertical spacing */
-    font-size: 18px; /* Increase font size for readability */
-    height: 20lvh;
-}
+        .navbar-brand img {
+            height: 80px; /* Adjust logo size */
+            width: auto;
+            border-radius: 50%;
+            background-color: beige;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-/* Increase logo size */
-.logo-image {
-    width: auto; /* Maintain aspect ratio */
-    background-color: beige;
-    height: 18lvh;
-    margin-left: 0;
-    border-radius: 95%;
-    z-index: 1;
-    position: relative;
-    padding: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    border: 2px solid #123456; /* White border for contrast */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out; /* Smooth animation */
-}
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff !important;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
 
-/* Hover effect */
-.logo-image:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0px 6px 15px #123456;
-}
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00 !important; /* Hover color */
+            transform: translateY(-2px);
+        }
 
+        .dropdown-menu {
+            background-color: #123456;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.navbar-nav .nav-link {
-    font-size: 28px; /* Make links more visible */
-    font-weight: bold; /* Emphasize menu items */
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10px 15px; /* Add spacing */
-    color: #fff !important; /* Ensure links are visible */
-}
+        .dropdown-item {
+            color: #fff !important;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
 
-/* Make dropdowns more readable */
-.dropdown-menu {
-    font-size: 25px;
-    padding: 10px;
-    background-color: #123456; /* Match navbar background */
-    border: none;
-}
+        .dropdown-item:hover {
+            background-color: #ffcc00;
+            color: #123456 !important;
+        }
 
-/* Ensure dropdown links are visible */
-.dropdown-menu .dropdown-item {
-    color: #ffff !important;
-}
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .navbar-brand img {
+                height: 60px; /* Smaller logo for mobile */
+            }
 
+            .navbar-nav {
+                margin-top: 1rem;
+            }
 
+            .navbar-nav .nav-link {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+
+            .dropdown-menu {
+                background-color: #123456;
+                margin-top: 0.5rem;
+            }
+        }
+
+     
     </style>
 </head>
 
 <body data-mobile-nav-style="full-screen-menu" data-mobile-nav-bg-color="#2d2c2b" class="custom-cursor">
-    <!-- Page Loader -->
-    <div id="preloader"></div>
-
+   
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="index.html" aria-label="Home">
@@ -143,10 +149,9 @@
                             </a>
                         </li>
 
-
                         <!-- Call-to-Action Button -->
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-primary" href="" role="button">Donate Now</a>
+                            <a class="nav-link btn btn-warning text-dark" href="donate.html">DONATE</a>
                         </li>
                     </ul>
                 </div>
@@ -159,22 +164,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- JavaScript for Graying Out Links -->
+    <!-- Preloader Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('#navbarLinks .nav-link');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    navLinks.forEach(l => l.classList.remove('disabled-link')); // Reset all links
-                    this.classList.add('disabled-link'); // Disable clicked link
-                });
-
-                // Highlight active page
-                if (window.location.href.includes(link.getAttribute("href"))) {
-                    link.classList.add("active");
-                }
-            });
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
         });
     </script>
 </body>
