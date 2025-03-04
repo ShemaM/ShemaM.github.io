@@ -11,10 +11,10 @@
     <!-- Custom CSS -->
     <style>
         /* Gradient Background */
-        .gradient-bg {
-            background: #123456;
-            color: white;
-        }
+    body{
+        background-image: url('image/donate-image.jpg');
+        background-size:contain;
+    }
 
         /* Hover Effect for Cards */
         .hover-effect {
@@ -64,7 +64,7 @@
     
       <!-- loading the header of the main page -->
 
-      <div id="header-container"></div>
+      <div id="header-container" style="background-color:#dd7e0a; width: auto;" ></div>
       <script src="loadHeader.js"></script>
 
 
@@ -72,7 +72,7 @@
     <section class="gradient-bg py-5">
         <div class="container">
             <h2 class="text-center display-4 fw-bold mb-4" style="color:#dd0aa4">Support Our Cause</h2>
-            <p class="text-center lead mb-5">Your generosity has the power to create real change. Every contribution, no matter the size, fuels our mission and helps us make a lasting impact. Choose a donation option below and join us in making a difference today!</p>
+            <p class="text-center lead mb-5 text-white">Your generosity has the power to create real change. Every contribution, no matter the size, fuels our mission and helps us make a lasting impact. Choose a donation option below and join us in making a difference today!</p>
 
             <div class="row g-4">
                 <!-- Donation Option 1 -->
@@ -175,6 +175,15 @@
             }
             alert(`Processing payment via ${selectedPaymentMethod}...`);
             // Add your payment processing logic here
+        }
+    </script>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        // Dark Mode Toggle Function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
         }
     </script>
     <script src="loadFooter.js"></script>

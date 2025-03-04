@@ -5,254 +5,757 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What We Do</title>
     <style>
-        
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Places video behind content */
-}
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-light: #ffffff;
+            --text-light: #333333;
+            --background-dark: #1a1a1a;
+            --text-dark: #f4f4f4;
+            --transition-speed: 0.3s;
+        }
 
-.video-container video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover; /* Ensures the video covers the section */
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background-light);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        body.dark-mode {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--secondary-color);
+            transition: color var(--transition-speed);
+        }
+
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5,
+        body.dark-mode h6 {
+            color: var(--text-dark);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        #header-container {
+            padding: 20px 0;
+            text-align: center;
+            background-color: var(--background-light);
+            transition: background-color var(--transition-speed);
+        }
+
+        body.dark-mode #header-container {
+            background-color: var(--background-dark);
+        }
+
+        /* Section Styling */
+        .impact-section {
+            padding: 4rem 0;
+        }
+
+        .impact-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .impact-section p.lead {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            transition: color var(--transition-speed);
+        }
+
+        body.dark-mode .impact-section p.lead {
+            color: var(--text-dark);
+        }
+
+        /* Cards Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--background-light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed), background var(--transition-speed);
+        }
+
+        body.dark-mode .card {
+            background: #2c3e50;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            transition: color var(--transition-speed);
+        }
+
+        body.dark-mode .card-title {
+            color: var(--text-dark);
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            transition: color var(--transition-speed);
+        }
+
+        body.dark-mode .card-text {
+            color: var(--text-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            transition: all var(--transition-speed);
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            color: var(--background-light);
+        }
+
+        /* Upcoming Projects Section */
+        .upcoming-projects {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: #ffffff;
+            padding: 4rem 0;
+        }
+
+        .upcoming-projects h2 {
+            color: #ffffff;
+        }
+
+        .upcoming-projects .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .upcoming-projects .card-title {
+            color: #ffffff;
+        }
+
+        .upcoming-projects .card-text {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .upcoming-projects .btn {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .upcoming-projects .btn:hover {
+            background: #ffffff;
+            color: var(--primary-color);
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: var(--background-light);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #2980b9;
+        }
     </style>
 </head>
 <body>
-    <!--Load Header-->
+    <!-- Load Header -->
     <div id="header-container"></div>
     <script src="loadHeader.js"></script>
 
     <!-- Page Content Section -->
-<section class="impact-section pb-5 pt-5" style="background: linear-gradient(135deg, #ffff, #3333);">
-    <div class="container" style="background: scroll;">
-        <!-- Section Heading -->
-        <div class="text-center mb-5">
-            <h2 class="fw-bold display-5 text-blue mb-3">What We Do</h2>
-            <p class="lead text-bold mx-auto fw-bold" style="text-rendering: optimizeLegibility;">
-                We are committed to creating meaningful change through impactful programs and initiatives. Explore our work and learn how we empower communities, foster leadership, and promote well-being.
-            </p>
-        </div>
+    <section class="impact-section">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <h1>What We Do</h1>
 
-        <!-- Cards Grid -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Card 1: Community Engagement -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="404.html" data-bs-toggle="" data-bs-target="">
-                        <img src="image/community engagement.jpg" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Back-to-School Event"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Community Engagement</h4>
-                        <p class="card-text text-muted">Back-to-School: Empowering Refugee Orphans</p>
-                        <hr class="divider mx-auto" style="width: 50px; height: 22px; background-color: #007bff;">
-                        <p class="text-muted">
-                            This event provided essential school supplies to over 100 refugee orphans, ensuring a bright academic future.
-                        </p>
-                        <a href= "Our Programs/community-engagement.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2: Leadership -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#webinarModal">
-                        <img src="image/pexels-divinetechygirl-1181274.jpg" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Emotional Intelligence Webinar"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Leadership</h4>
-                        <p class="card-text text-muted">Webinar: Emotional Intelligence</p>
-                        <hr class="divider mx-auto" style="width: 50px; height: 22px; background-color: #007bff;">
-                        <p class="text-muted">
-                            An insightful session with 50 youths, helping them develop self-awareness and empathy.
-                        </p>
-                        <a href="emotional-intelligence.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3: Financial Literacy -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#financeModal">
-                        <img src="image/pexels-innoh-khumbuza-736696-2877180.jpg" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Financial Literacy Workshop"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Financial Literacy</h4>
-                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
-                        <p class="text-muted">
-                            Partnering with experts, we conducted workshops that empowered over 80 refugees with essential financial skills.
-                        </p>
-                        <a href="404.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4: Environmental Health -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#environmentModal">
-                        <img src="image/fabiola.png" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Environmental Health Workshop"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Environmental Health</h4>
-                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
-                        <p class="text-muted">
-                            We partnered with experts to educate communities on environmental conservation and sustainable practices.
-                        </p>
-                        <a href="environmental-health.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5: Advocacy -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#advocacyModal">
-                        <img src="image/Grace.png" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Advocacy Workshop"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Advocacy</h4>
-                        <hr class="divider mx-auto" style="width: 50px; height: 22px; background-color: #007bff;">
-                        <p class="text-muted">
-                            We empowered over 80 refugees with knowledge on their rights, financial literacy, and legal support.
-                        </p>
-                        <a href="404.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6: Sports Programs -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#sportsModal">
-                        <img src="image/shema.png" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Sports Programs"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Sports Programs</h4>
-                        <hr class="divider mx-auto" style="width: 50px; height: 22px; background-color: #007bff;">
-                        <p class="text-muted">
-                            Through our sports initiatives, we foster teamwork, discipline, and mental well-being for youths and refugees.
-                        </p>
-                        <a href="404.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 7: Mental Health Program -->
-            <div class="col">
-                <div class="card text-center border-0 shadow-lg h-100 transition-all hover-shadow">
-                    <!-- Clickable Image -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#mentalHealthModal">
-                        <img src="image/fiston.png" class="card-img-top rounded-circle mx-auto mt-4"
-                             alt="Mental Health Program"
-                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="card-title fw-bold text-dark">Mental Health Program</h4>
-                        <hr class="divider mx-auto" style="width: 50px; height: 22px; background-color: #007bff;">
-                        <p class="text-muted">
-                            Workshops, peer support, and wellness activities to foster emotional resilience.
-                        </p>
-                        <a href="404.html" class="btn btn-outline-primary mt-2">Learn More</a>
-                    </div>
-                </div>
+                <h3 class="fw-bold text-center text-dark lead" style="text-indent: 45px;">
+                    We are deeply committed to driving meaningful and sustainable change through innovative programs and transformative initiatives. 
+                    Our work is rooted in empowering communities, nurturing leadership, and promoting holistic well-being. 
+                    From grassroots advocacy to global partnerships, we strive to create opportunities that inspire growth, resilience, and unity. 
+                    Explore our initiatives to discover how we are making a difference—one community, one leader, and one life at a time.
+                </h3>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
-<!-- Projects Section -->
-<section class="impact-section pb-5 pt-5 bg-light">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold display-5 text-dark mb-3">Upcoming Projects</h2>
-        <p class="lead text-bold mx-auto" style="max-width: 800px; background-image: url('image/homepage-bg.jpg'); background-position: cover;">
-            At Importance Leadership, we are constantly working on meaningful projects to create a positive impact. Explore our upcoming initiatives and discover how you can contribute to our mission of empowering communities and fostering leadership.
-        </p>
-    </div>
-    <div class="container">
-
-        <!-- Project Cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Project Card 1 -->
-            <div class="col">
-                <div class="impact-card h-100 p-4 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center transition-all hover-shadow">
-                    <span class="alt-font fw-bold text-primary fs-5 mb-2">Youth Leadership Retreat</span>
-                    <p class="text-muted mb-3">Global Initiatives</p>
-                    <hr class="divider w-50 my-3">
-                    <p class="text-muted">
-                        Join us in our youth leadership retreats designed to nurture leadership skills and global initiatives aimed at addressing pressing societal issues. These experiences provide an avenue for personal growth and the development of essential leadership qualities.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+    
+    <section class="impact-section" id="impact-section">
+        <div class="container">
+            <h2 class="impact-heading" style="color:#ff7b00;">Our Programs</h2>
+                <div class="container my-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h4 class="text-primary fw-bold">Our Transformative Programs</h4>
+                        <p class="text-muted mt-3 color-666">
+                            Our transformative programs are designed to shape the next generation of influential and visionary leaders. 
+                            Guided by our vision of an inclusive world where every youth is empowered and equipped to unlock their full potential, 
+                            <strong>Importance Leadership</strong> is committed to mobilizing, inspiring, and empowering young individuals to become impactful change-makers.
+                        </p>
+                        <h5 class="mt-4 text-dark fw-semibold">Our Program Objectives:</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To develop essential leadership skills and competencies among the youth.
+                            </li>
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To provide mentorship, networking, and hands-on experiences that promote personal and professional growth.
+                            </li>
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To inspire and empower young individuals to become agents of positive change in their communities.
+                            </li>
+                            <li class="list-group-item border-0">
+                                <i class="bi bi-check-circle-fill text-success"></i> 
+                                To create a supportive ecosystem that enables youth to access resources and opportunities to discover their aspirations.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
 
-            <!-- Project Card 2 -->
-            <div class="col">
-                <div class="impact-card h-100 p-4 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center transition-all hover-shadow">
-                    <span class="alt-font fw-bold text-primary fs-5 mb-2">Community Service Programs</span>
-                    <p class="text-muted mb-3">Empowerment Workshops</p>
-                    <hr class="divider w-50 my-3">
-                    <p class="text-muted">
-                        Engage in our community service programs and empowerment workshops that focus on creating a positive impact in local communities. These initiatives foster leadership abilities and instill a sense of responsibility towards social and environmental causes.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+            <div class="divider"></div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+                
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#impactModal">
+                            <img src="image/community engagement.jpg" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Back-to-School Event"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Community Engagement</h4>
+                            <p class="card-text text-muted">Back-to-School: Empowering Refugee Orphans</p>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>This event provided essential school supplies to over 100 refugee orphans, ensuring a bright academic future.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Modal for Impact Event -->
+                <div class="modal fade" id="impactModal" tabindex="-1" aria-labelledby="impactModalLabel" inert>
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="impactModalLabel">Back-to-School: Empowering Refugee Orphans</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Read More</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/community engagement.jpg" class="img-fluid rounded" alt="Back-to-School Event">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Community Engagement</p>
+                                        <p>
+                                            This initiative impacted over <strong>100 refugee orphans</strong> in Nairobi, 
+                                            providing them with essential school supplies to kickstart their academic year with confidence.
+                                        </p>
+                                        <p>
+                                            Our mission is to ensure no child is left behind by equipping them with books, stationery, 
+                                            and mentorship opportunities. This initiative fosters hope, resilience, and empowerment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                            <!--Webinar:Emotional Intelligence-->
+                
+                            <div class="col-md-4">
+                                <div class="card text-center border-0 shadow-lg h-100">
+                                    <!-- Clickable Image -->
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#webinarModal">
+                                        <img src="image/pexels-divinetechygirl-1181274.jpg" class="card-img-top rounded-circle mx-auto mt-4"
+                                             alt="Emotional Intelligence Webinar"
+                                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                                    </a>
+                            
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <h4 class="card-title fw-bold">Leadership</h4>
+                                        <p class="card-text text-muted">Webinar: Emotional Intelligence</p>
+                                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                            
+                                        <!-- Short Description -->
+                                        <div class="description mt-3">
+                                            <p>An insightful session with 50 youths, helping them develop self-awareness and empathy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Modal for Webinar -->
+                            <div class="modal fade" id="webinarModal" tabindex="-1" aria-labelledby="webinarModalLabel">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="webinarModalLabel">Webinar: Emotional Intelligence</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Read More</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <!-- Enlarged Image -->
+                                                    <img src="image/pexels-rdne-7414284.jpg" class="img-fluid rounded" alt="Emotional Intelligence Webinar">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- Detailed Description -->
+                                                    <p class="lead">Leadership & Growth</p>
+                                                    <p>
+                                                        We hosted an engaging webinar on <strong>Emotional Intelligence</strong>, attended by <strong>50 youth participants</strong>. 
+                                                        The session focused on self-awareness, managing emotions, and developing strong interpersonal skills.
+                                                    </p>
+                                                    <p>
+                                                        Emotional intelligence is a crucial leadership trait that enhances decision-making, empathy, and conflict resolution.
+                                                        This webinar provided valuable insights for young leaders to thrive in their personal and professional lives.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Financial Literacy-->
+    
+                            <div class="col-md-4">
+                                <div class="card text-center border-0 shadow-lg h-100">
+                                    <!-- Clickable Image -->
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#financeModal">
+                                        <img src="image/pexels-innoh-khumbuza-736696-2877180.jpg" class="card-img-top rounded-circle mx-auto mt-4"
+                                             alt="Financial Literacy Workshop"
+                                             style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                                    </a>
+                            
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <h4 class="card-title fw-bold">Financial Literacy</h4>
+                                        <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                            
+                                        <!-- Short Description -->
+                                        <div class="description mt-3">
+                                            <p>Partnering with experts, we conducted workshops that empowered over 80 refugees with essential financial skills.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Modal for Financial Literacy Workshop -->
+                            <div class="modal fade" id="financeModal" tabindex="-1" aria-labelledby="financeModalLabel">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="financeModalLabel">Financial Literacy Workshop</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <!-- Enlarged Image -->
+                                                    <img src="image/pacific.png" class="img-fluid rounded" alt="Financial Literacy Workshop">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- Detailed Description -->
+                                                    <p class="lead">Empowering Refugees</p>
+                                                    <p>
+                                                        Our <strong>Financial Literacy Workshop</strong> was designed to equip refugees with the knowledge needed to manage their finances effectively. 
+                                                        We collaborated with industry experts to train over <strong>80 participants</strong> in budgeting, saving, investing, and financial planning.
+                                                    </p>
+                                                    <p>
+                                                        These skills are essential for financial independence and long-term stability, helping refugees build a secure future in their new environments.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                <!--Environmental Impact-->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#environmentModal">
+                            <img src="image/fabiola.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Environmental Health Workshop"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Environmental Health</h4>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>We partnered with experts to educate communities on environmental conservation and sustainable practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Environmental Health Workshop -->
+                <div class="modal fade" id="environmentModal" tabindex="-1" aria-labelledby="environmentModalLabel">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="environmentModalLabel">Environmental Health Workshop</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/uwase.png" class="img-fluid rounded" alt="Environmental Health Workshop">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Sustainable Living and Conservation</p>
+                                        <p>
+                                            Our <strong>Environmental Health Workshop</strong> brought together experts and community members to discuss sustainable living, waste management, and conservation efforts.
+                                            Over <strong>80 participants</strong> gained insights on reducing environmental impact and promoting eco-friendly habits.
+                                        </p>
+                                        <p>
+                                            By advocating for sustainable solutions, we aim to create cleaner, healthier communities and preserve natural resources for future generations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--Advocacy-->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#advocacyModal">
+                            <img src="image/Grace.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Advocacy Workshop"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Advocacy</h4>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>We empowered over 80 refugees with knowledge on their rights, financial literacy, and legal support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Advocacy Workshop -->
+                <div class="modal fade" id="advocacyModal" tabindex="-1" aria-labelledby="advocacyModalLabel">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="advocacyModalLabel">Advocacy & Empowerment</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/Bonkey.png" class="img-fluid rounded" alt="Advocacy Workshop">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Human Rights & Legal Awareness</p>
+                                        <p>
+                                            Our <strong>Advocacy Workshop</strong> aimed at equipping refugees with the knowledge to navigate legal systems, understand their rights, and gain financial independence.
+                                        </p>
+                                        <p>
+                                            We partnered with legal experts and financial advisors to provide hands-on training and mentorship, ensuring participants have the tools to advocate for themselves and their communities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--Sports-->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#sportsModal">
+                            <img src="image/shema.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Sports Programs"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Sports Programs</h4>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Through our sports initiatives, we foster teamwork, discipline, and mental well-being for youths and refugees.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Sports Programs -->
+                <div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsModalLabel">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="sportsModalLabel">Empowering Through Sports</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/IL02 (1).png" class="img-fluid rounded" alt="Sports Programs">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Fostering Community Through Sports</p>
+                                        <p>
+                                            Our **Sports Programs** provide an inclusive space for youth and refugees to develop skills in teamwork, leadership, and resilience. 
+                                        </p>
+                                        <p>
+                                            We organize football, woodball, and athletics programs, ensuring participants not only stay physically active but also develop discipline and confidence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--Mental Health-->
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-lg h-100">
+                        <!-- Clickable Image -->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#mentalHealthModal">
+                            <img src="image/fiston.png" class="card-img-top rounded-circle mx-auto mt-4"
+                                 alt="Mental Health Program"
+                                 style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #007bff; cursor: pointer;">
+                        </a>
+                
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Mental Health Program</h4>
+                            <hr class="divider mx-auto" style="width: 50px; height: 2px; background-color: #007bff;">
+                
+                            <!-- Short Description -->
+                            <div class="description mt-3">
+                                <p>Workshops, peer support, and wellness activities to foster emotional resilience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modal for Mental Health Program -->
+                <div class="modal fade" id="mentalHealthModal" tabindex="-1" aria-labelledby="mentalHealthModalLabel" inert>
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title fw-bold" id="mentalHealthModalLabel">Mental Health & Wellbeing</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Enlarged Image -->
+                                        <img src="image/Leadership.jpg" class="img-fluid rounded" alt="Mental Health Program">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Detailed Description -->
+                                        <p class="lead">Prioritizing Mental Well-being</p>
+                                        <p>
+                                            Our Mental Health Program provides workshops, support networks, and wellness activities to help individuals develop emotional resilience.
+                                        </p>
+                                        <p>
+                                            <strong>Key Features: </strong>
+                                            - Workshops & Seminars: Covers stress management, self-awareness, and emotional intelligence.  
+                                            - Peer Support & Counseling: Safe spaces for participants to share experiences and seek guidance.  
+                                            - Wellness Activities: Includes mindfulness, yoga, and creative therapies.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Upcoming Projects Section -->
+    <section class="upcoming-projects" style="background-image: url('image/coming-soon.jpg'); background-size:auto;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Upcoming Projects</h2>
+                <p class="lead">
+                    At Importance Leadership, we are constantly working on meaningful projects to create a positive impact. Explore our upcoming initiatives and discover how you can contribute to our mission of empowering communities and fostering leadership.
+                </p>
             </div>
 
-            <!-- Project Card 3 -->
-            <div class="col">
-                <div class="impact-card h-100 p-4 shadow-sm rounded-3 bg-white text-center d-flex flex-column align-items-center transition-all hover-shadow">
-                    <span class="alt-font fw-bold text-primary fs-5 mb-2">Youth Advocacy Campaigns</span>
-                    <p class="text-muted mb-3">Environmental Conservation Efforts</p>
-                    <hr class="divider w-50 my-3">
-                    <p class="text-muted">
-                        Participate in our youth advocacy campaigns and environmental conservation efforts, aimed at raising awareness and fostering stewardship towards the environment. These initiatives provide a platform for young leaders to drive change and make a lasting impact.
-                    </p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">Learn More</a>
+            <!-- Project Cards -->
+            <div class="card-grid">
+                <!-- Project 1: Youth Leadership Retreat -->
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Youth Leadership Retreat</h4>
+                        <p class="card-text">
+                            Join us in our youth leadership retreats designed to nurture leadership skills and global initiatives aimed at addressing pressing societal issues.
+                        </p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Community Service Programs -->
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Community Service Programs</h4>
+                        <p class="card-text">
+                            Engage in our community service programs and empowerment workshops that focus on creating a positive impact in local communities.
+                        </p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Youth Advocacy Campaigns -->
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Youth Advocacy Campaigns</h4>
+                        <p class="card-text">
+                            Participate in our youth advocacy campaigns and environmental conservation efforts, aimed at raising awareness and fostering stewardship towards the environment.
+                        </p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script src="loadFooter.js"></script>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        // Dark Mode Toggle Function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+    <!-- Load Footer -->
+    <script src="loadFooter.js"></script>
 </body>
 </html>
