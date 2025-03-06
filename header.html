@@ -151,7 +151,7 @@
 
                         <!-- Call-to-Action Button -->
                         <li class="nav-item ms-lg-3">
-                            <a class="nav-link btn btn-warning text-dark" href="donate.html">DONATE</a>
+                            <a class="nav-link" href="donate.html">DONATE</a>
                         </li>
                     </ul>
                 </div>
@@ -168,7 +168,10 @@
     <script>
         window.addEventListener('load', function () {
             const preloader = document.getElementById('preloader');
-            preloader.style.display = 'none';
+            preloader.style.display = 'block';
+            setTimeout(() => {
+                preloader.style.display = 'block';
+            }, 1000);
         });
     </script>
 </body>
