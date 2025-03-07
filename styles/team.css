@@ -1,0 +1,105 @@
+
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .team-section {
+            padding: 80px 0;
+        }
+
+        .team-section .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
+
+        .team-section .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section .card-img-top {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+            margin: 20px auto 15px;
+        }
+
+        .team-section .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-section .card-text {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .team-section .social-icon a {
+            margin: 0 8px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .team-section .social-icon a:hover {
+            color: #007bff;
+        }
+
+        .team-section .read-more-btn {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .team-section .read-more-btn:hover {
+            text-decoration: underline;
+        }
+
+        .team-section .full-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .header-section {
+            background: linear-gradient(135deg, #007bff, #004085);
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .header-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .footer-section {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .divider {
+            border-top: 3px solid #123456;
+            width: 50%;
+            margin: 5px auto;
+}
+    
